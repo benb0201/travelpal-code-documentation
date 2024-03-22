@@ -1,0 +1,115 @@
+\doxysection{Review.\+java}
+\hypertarget{_review_8java_source}{}\label{_review_8java_source}\index{Review.java@{Review.java}}
+\mbox{\hyperlink{_review_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.models;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00003}00003\ \textcolor{keyword}{import}\ jakarta.persistence.*;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00005}00005\ @Entity}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00006}00006\ @Table(name\ =\ \textcolor{stringliteral}{"{}reviews"{}})}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00007}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{00007}}\ public\ class\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00008}00008\ \ \ \ \ @Id}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00009}00009\ \ \ \ \ @GeneratedValue(strategy\ =\ GenerationType.SEQUENCE,\ generator\ =\ \textcolor{stringliteral}{"{}review\_sequence"{}})}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00010}00010\ \ \ \ \ @SequenceGenerator(name\ =\ \textcolor{stringliteral}{"{}review\_sequence"{}},\ sequenceName\ =\ \textcolor{stringliteral}{"{}review\_sequence"{}},\ allocationSize\ =\ 1)}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00011}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a7bf1003ca73d293018c960c1a447cd3b}{00011}}\ \ \ \ \ private\ Long\ \textcolor{keywordtype}{id};}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00013}00013\ \ \ \ \ @Column(nullable\ =\ false)}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00014}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_ad34c73416a4d585c47dfe2151488a6c4}{00014}}\ \ \ \ \ private\ String\ title;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00016}00016\ \ \ \ \ @Column(nullable\ =\ false)}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00017}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a4e2948c46a77a0acf7bc31489f2bf97c}{00017}}\ \ \ \ \ private\ String\ content;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00019}00019\ \ \ \ \ @Column(nullable\ =\ false)}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00020}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a037d223f23be8be68222c68bdc2bcdf9}{00020}}\ \ \ \ \ private\ \textcolor{keywordtype}{int}\ rating;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00022}00022\ \ \ \ \ @ManyToOne}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00023}00023\ \ \ \ \ @JoinColumn(name\ =\ "{}destination\_id"{})}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00024}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_acb3c2fbfc72d4d566b6db4be919d8884}{00024}}\ \ \ \ \ private\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}\ destination;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00026}00026\ \ \ \ \ @ManyToOne}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00027}00027\ \ \ \ \ @JoinColumn(name\ =\ "{}activity\_id"{})}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00028}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a80e0553be5a398bf9adfb72ba7ed48d8}{00028}}\ \ \ \ \ private\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00030}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a65d33aa233e7d5c6853280eb85819da3}{00030}}\ \ \ \ \ public\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00033}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a3e4a5a1d458465d60fc80e7632667d16}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a3e4a5a1d458465d60fc80e7632667d16}{Review}}(Long\ \textcolor{keywordtype}{id},\ String\ title,\ String\ content,\ \textcolor{keywordtype}{int}\ rating,\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}\ destination,\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ this.title\ =\ title;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ this.content\ =\ content;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ this.rating\ =\ rating;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ this.destination\ =\ destination;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ this.activity\ =\ activity;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00042}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a35e02884a8e5464f2b0eb888333b2a8d}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a35e02884a8e5464f2b0eb888333b2a8d}{Review}}(String\ title,\ String\ content,\ \textcolor{keywordtype}{int}\ rating,\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}\ destination,\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ this.title\ =\ title;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ this.content\ =\ content;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ this.rating\ =\ rating;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ this.destination\ =\ destination;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ this.activity\ =\ activity;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00050}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_ad135887b62b58d8df97003321bf29fd5}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ Long\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_ad135887b62b58d8df97003321bf29fd5}{getId}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ id;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00054}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_aaaa48c5311fbf96fc16ba20aae203655}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_aaaa48c5311fbf96fc16ba20aae203655}{setId}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00058}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_ae2db299618734711dd3adab229844a09}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_ae2db299618734711dd3adab229844a09}{getTitle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ title;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00062}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a2be4a6672f921fad353429467074458d}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a2be4a6672f921fad353429467074458d}{setTitle}}(String\ title)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ this.title\ =\ title;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00066}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a066361783ab700411cb937732432fd26}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a066361783ab700411cb937732432fd26}{getContent}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ content;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00070}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a250ec56009fe781749cb386f29e7442f}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a250ec56009fe781749cb386f29e7442f}{setContent}}(String\ content)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ this.content\ =\ content;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00074}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a1be00d5f3ab19c568e6a66d436fc3062}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a1be00d5f3ab19c568e6a66d436fc3062}{getRating}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rating;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00078}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a8a7e76e1d574da18963ff1212c0ea10f}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a8a7e76e1d574da18963ff1212c0ea10f}{setRating}}(\textcolor{keywordtype}{int}\ rating)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ this.rating\ =\ rating;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00082}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_aa6b1bd030856eae45961081fa67e8565}{00082}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_aa6b1bd030856eae45961081fa67e8565}{getDestination}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ destination;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00086}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a504ed342817d95f28b5668000687eb2e}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a504ed342817d95f28b5668000687eb2e}{setDestination}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}\ destination)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ this.destination\ =\ destination;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00090}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a3bef8178148b630962c31650bd9735f3}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a3bef8178148b630962c31650bd9735f3}{getActivity}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ activity;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00094}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a2fd77964183597782024ec35f5a40ac3}{00094}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a2fd77964183597782024ec35f5a40ac3}{setActivity}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ this.activity\ =\ activity;}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00098}00098\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00099}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a0044be1205c0c7442884a4c767ffd562}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a0044be1205c0c7442884a4c767ffd562}{toString}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Review\{"{}}\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}id="{}}\ +\ \textcolor{keywordtype}{id}\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ title='"{}}\ +\ title\ +\ \textcolor{charliteral}{'\(\backslash\)''}\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ content='"{}}\ +\ content\ +\ \textcolor{charliteral}{'\(\backslash\)''}\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ rating="{}}\ +\ rating\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ destination="{}}\ +\ destination\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ activity="{}}\ +\ activity\ +}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'\}'};}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_8java_source_l00109}00109\ \}}
+
+\end{DoxyCode}

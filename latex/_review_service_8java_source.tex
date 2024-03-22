@@ -1,0 +1,59 @@
+\doxysection{Review\+Service.\+java}
+\hypertarget{_review_service_8java_source}{}\label{_review_service_8java_source}\index{ReviewService.java@{ReviewService.java}}
+\mbox{\hyperlink{_review_service_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.service;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Review;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ReviewRepository;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00005}00005\ \textcolor{keyword}{import}\ jakarta.persistence.EntityNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.stereotype.Service;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00012}00012\ @Service}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00013}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{ReviewService}}\ \{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00014}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_review_repository}{ReviewRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}};}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00016}00016\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00017}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_ab230c8c5d3d4c4fdd6d5f200f4df9b02}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_ab230c8c5d3d4c4fdd6d5f200f4df9b02}{ReviewService}}(\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_review_repository}{ReviewRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}})\ \{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00018}00018\ \ \ \ \ \ \ \ \ this.reviewRepository\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}};}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00021}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_abacd15771a68adb50d7a837e8e4f2316}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Review>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_abacd15771a68adb50d7a837e8e4f2316}{getReviews}}()\{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}}.findAll();}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00025}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a10f00b5d01617a408aab0ff26bb188b5}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a10f00b5d01617a408aab0ff26bb188b5}{addNewReview}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}\ review)\{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}}.save(review);}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00029}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a7f27a04be9017635edbc3023334050ea}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a7f27a04be9017635edbc3023334050ea}{deleteReview}}(Long\ reviewId)\{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}}.deleteById(reviewId);}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00033}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a2622171fa2d7a27388dcd95677f935be}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a2622171fa2d7a27388dcd95677f935be}{updateReview}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}\ review,\ Long\ reviewId)\{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ Optional<Review>\ reviewOptional\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}}.findById(reviewId);}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reviewOptional.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ EntityNotFoundException(\textcolor{stringliteral}{"{}Transport\ with\ ID\ "{}}\ +\ reviewId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}});}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ existing\ review\ from\ the\ Optional}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}\ existingReview\ =\ reviewOptional.get();}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ attributes\ of\ the\ existing\ review\ with\ the\ values\ from\ the\ new\ review}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ existingReview.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a2be4a6672f921fad353429467074458d}{setTitle}}(review.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_ae2db299618734711dd3adab229844a09}{getTitle}}());}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ existingReview.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a250ec56009fe781749cb386f29e7442f}{setContent}}(review.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a066361783ab700411cb937732432fd26}{getContent}}());}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ existingReview.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a8a7e76e1d574da18963ff1212c0ea10f}{setRating}}(review.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a1be00d5f3ab19c568e6a66d436fc3062}{getRating}}());}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ existingReview.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a504ed342817d95f28b5668000687eb2e}{setDestination}}(review.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_aa6b1bd030856eae45961081fa67e8565}{getDestination}}());}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ existingReview.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a2fd77964183597782024ec35f5a40ac3}{setActivity}}(review.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review_a3bef8178148b630962c31650bd9735f3}{getActivity}}());}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ updated\ review\ back\ to\ the\ repository}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a43dbe9a982cb22c8fd64f18f47058cd1}{reviewRepository}}.save(existingReview);}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_service_8java_source_l00053}00053\ \}}
+
+\end{DoxyCode}

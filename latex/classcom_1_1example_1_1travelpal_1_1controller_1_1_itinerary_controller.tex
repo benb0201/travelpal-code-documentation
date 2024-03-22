@@ -1,0 +1,159 @@
+\doxysection{com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller}{}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller}\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a7fd872fa9349bad59a4f93ebfe3a0058}{Itinerary\+Controller}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service}{Itinerary\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itinerary\+Service}})
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a8612cf106a3add466f075d6ce395f36f}{get\+Itineraries}} (@Request\+Param(required=false) Long client\+Id)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a09aa081d9375e8c5b6ad8ae09f26ce32}{get\+Itinerary\+By\+Id}} (@Path\+Variable("{}itinerary\+Id"{}) Long itinerary\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a5fae18012fd5872b910b2ae18a74ce2e}{register\+Itinerary}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}} itinerary)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a563f88adf7f150abc75e84209f81475c}{delete\+Itinerary}} (@Path\+Variable("{}itinerary\+Id"{}) Long itinerary\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a2b431b4cef9cfaa23a3896f9f670298f}{update\+Itinerary}} (@Path\+Variable("{}itinerary\+Id"{}) Long itinerary\+Id, @Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}} itinerary)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service}{Itinerary\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itinerary\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00013}{13}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a7fd872fa9349bad59a4f93ebfe3a0058}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a7fd872fa9349bad59a4f93ebfe3a0058} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!ItineraryController@{ItineraryController}}
+\index{ItineraryController@{ItineraryController}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{ItineraryController()}{ItineraryController()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+Itinerary\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service}{Itinerary\+Service}}}]{itinerary\+Service }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00018}{18}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ this.itineraryService\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}};}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a563f88adf7f150abc75e84209f81475c}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a563f88adf7f150abc75e84209f81475c} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!deleteItinerary@{deleteItinerary}}
+\index{deleteItinerary@{deleteItinerary}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{deleteItinerary()}{deleteItinerary()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+delete\+Itinerary (\begin{DoxyParamCaption}\item[{@Path\+Variable("{}itinerary\+Id"{}) Long}]{itinerary\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00043}{43}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service_abe8c03bdada36b41d5d3cfe9daaeae81}{deleteItinerary}}(itineraryId);}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a8612cf106a3add466f075d6ce395f36f}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a8612cf106a3add466f075d6ce395f36f} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!getItineraries@{getItineraries}}
+\index{getItineraries@{getItineraries}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{getItineraries()}{getItineraries()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}} $>$ com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+get\+Itineraries (\begin{DoxyParamCaption}\item[{@Request\+Param(required=false) Long}]{client\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00024}{24}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clientId\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Endpoint\ to\ retrieve\ itineraries\ for\ the\ authenticated\ client}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//THIS\ IS\ NOT\ SECURE\ YET}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service_a10d972bbd063bb1b23afbaaefcb86baa}{getItinerariesByClientId}}(clientId);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service_a79ce23e7bc8e44fadf216131c578131d}{getItineraries}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a09aa081d9375e8c5b6ad8ae09f26ce32}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a09aa081d9375e8c5b6ad8ae09f26ce32} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!getItineraryById@{getItineraryById}}
+\index{getItineraryById@{getItineraryById}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{getItineraryById()}{getItineraryById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}} com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+get\+Itinerary\+By\+Id (\begin{DoxyParamCaption}\item[{@Path\+Variable("{}itinerary\+Id"{}) Long}]{itinerary\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00035}{35}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service_a4dfa5bccb8f0f1f7e3b5fa0364505816}{getItineraryById}}(itineraryId);\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a5fae18012fd5872b910b2ae18a74ce2e}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a5fae18012fd5872b910b2ae18a74ce2e} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!registerItinerary@{registerItinerary}}
+\index{registerItinerary@{registerItinerary}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{registerItinerary()}{registerItinerary()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+register\+Itinerary (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}}}]{itinerary }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00038}{38}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service_aebb1dfb4b1b8774d708ff66a6f1e1dff}{addNewItinerary}}(itinerary);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a2b431b4cef9cfaa23a3896f9f670298f}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_a2b431b4cef9cfaa23a3896f9f670298f} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!updateItinerary@{updateItinerary}}
+\index{updateItinerary@{updateItinerary}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{updateItinerary()}{updateItinerary()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+update\+Itinerary (\begin{DoxyParamCaption}\item[{@Path\+Variable("{}itinerary\+Id"{}) Long}]{itinerary\+Id,  }\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}}}]{itinerary }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00048}{48}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}{itineraryService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service_a337611afa303699ae7bf8ac9acf7e33e}{updateItinerary}}(itinerary,\ itineraryId);}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller_af527d92f201e956054f246f6f033b514} 
+\index{com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}!itineraryService@{itineraryService}}
+\index{itineraryService@{itineraryService}!com.example.travelpal.controller.ItineraryController@{com.example.travelpal.controller.ItineraryController}}
+\doxysubsubsection{\texorpdfstring{itineraryService}{itineraryService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service}{Itinerary\+Service}} com.\+example.\+travelpal.\+controller.\+Itinerary\+Controller.\+itinerary\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_controller_8java_source_l00015}{15}} of file \mbox{\hyperlink{_itinerary_controller_8java_source}{Itinerary\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_itinerary_controller_8java}{Itinerary\+Controller.\+java}}\end{DoxyCompactItemize}

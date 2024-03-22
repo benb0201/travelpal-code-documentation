@@ -1,0 +1,58 @@
+\doxysection{Transport\+Service.\+java}
+\hypertarget{_transport_service_8java_source}{}\label{_transport_service_8java_source}\index{TransportService.java@{TransportService.java}}
+\mbox{\hyperlink{_transport_service_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.service;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Transport;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.repository.TransportRepository;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00005}00005\ \textcolor{keyword}{import}\ jakarta.persistence.EntityNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.stereotype.Service;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00012}00012\ @Service}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00013}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service}{TransportService}}\ \{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00014}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository}{TransportRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}};}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00016}00016\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00017}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a755e06629d0d2e5ff4fab65a19f597bc}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a755e06629d0d2e5ff4fab65a19f597bc}{TransportService}}(\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository}{TransportRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}})\ \{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00018}00018\ \ \ \ \ \ \ \ \ this.transportRepository\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}};}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00021}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a36ce5a418a397279f45c0ff82883304d}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Transport>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a36ce5a418a397279f45c0ff82883304d}{getTransportation}}()\{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.findAll();}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00025}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a7871ed0d61db9ff3da5a0a6704760f4b}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a7871ed0d61db9ff3da5a0a6704760f4b}{addNewTransport}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}}\ transport)\{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.save(transport);}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00029}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ad0cc664c40e26a45927aa984b5c02595}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ad0cc664c40e26a45927aa984b5c02595}{deleteTransport}}(Long\ transportId)\{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.deleteById(transportId);}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00033}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a2b0e62289378237311bbc70b184e83ee}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a2b0e62289378237311bbc70b184e83ee}{updateTransport}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}}\ transport,\ Long\ transportId)\{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ Optional<Transport>\ transportOptional\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.findById(transportId);}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transportOptional.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ EntityNotFoundException(\textcolor{stringliteral}{"{}Transport\ with\ ID\ "{}}\ +\ transportId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}});}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ existing\ transport\ from\ the\ Optional}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}}\ existingTransport\ =\ transportOptional.get();}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ attributes\ of\ the\ existing\ transport\ with\ the\ values\ from\ the\ new\ transport}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ existingTransport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_ab30a43fe89d223df05d67427477abda1}{setName}}(transport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_a625b1abd413a2821d4e21127354da070}{getName}}());}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ existingTransport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_ac88374edcb7e07f4f7660c599f107998}{setDescription}}(transport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_ab666b923204ca479a6a71713df967a03}{getDescription}}());}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ existingTransport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_a46cf6f7303ba62ba330404080e1ca732}{setType}}(transport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_ae68af938996862d84face37ac2152183}{getType}}());}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ existingTransport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_a8612ece1e73a45e4adba716531a2de83}{setCost}}(transport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_a37686d50373a95167aae7e090c52f7d6}{getCost}}());}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ existingTransport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_a8876b10432846eef323746c8573aa8c7}{setDestinations}}(transport.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport_aa74ac1e9b39e54134c948a24a310de0a}{getDestinations}}());}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ updated\ transport\ back\ to\ the\ repository}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.save(existingTransport);}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transport_service_8java_source_l00052}00052\ \}}
+
+\end{DoxyCode}

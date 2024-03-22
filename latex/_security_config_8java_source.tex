@@ -1,0 +1,59 @@
+\doxysection{Security\+Config.\+java}
+\hypertarget{_security_config_8java_source}{}\label{_security_config_8java_source}\index{SecurityConfig.java@{SecurityConfig.java}}
+\mbox{\hyperlink{_security_config_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.configuration;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.springframework.context.annotation.Bean;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.springframework.context.annotation.Configuration;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.http.HttpMethod;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.security.authentication.AuthenticationManager;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.security.authentication.ProviderManager;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.springframework.security.authentication.dao.DaoAuthenticationProvider;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.springframework.security.config.annotation.web.builders.HttpSecurity;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00011}00011\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.User;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00012}00012\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.UserDetails;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00013}00013\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.UserDetailsService;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00014}00014\ \textcolor{keyword}{import}\ org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00015}00015\ \textcolor{keyword}{import}\ org.springframework.security.crypto.password.PasswordEncoder;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00016}00016\ \textcolor{keyword}{import}\ org.springframework.security.provisioning.InMemoryUserDetailsManager;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00017}00017\ \textcolor{keyword}{import}\ org.springframework.security.web.SecurityFilterChain;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00019}00019\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.springframework.security.config.Customizer.withDefaults;}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00021}00021\ @Configuration}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00022}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config}{00022}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config}{SecurityConfig}}\ \{}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00024}00024\ \ \ \ \ @Bean}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00025}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ PasswordEncoder\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{passwordEncoder}}()\{}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ BCryptPasswordEncoder();}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00029}00029\ \ \ \ \ @Bean}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00030}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_adf340b1299febfc9b0b27911c5abe4c7}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ SecurityFilterChain\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_adf340b1299febfc9b0b27911c5abe4c7}{defaultSecurityFilterChain}}(HttpSecurity\ http)\ \textcolor{keywordflow}{throws}\ Exception\ \{}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ http}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .csrf(csrf\ -\/>\ csrf.disable())}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .formLogin(withDefaults())\ \textcolor{comment}{//\ Use\ default\ Spring\ Security\ login\ form}}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00037}00037\ \ \ \ \ @Bean}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00038}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_a384a3ffc8d7d0d71261984ed5aea67ab}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ UserDetailsService\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_a384a3ffc8d7d0d71261984ed5aea67ab}{users}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ UserDetails\ admin\ =\ User.builder()}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .username(\textcolor{stringliteral}{"{}admin"{}})}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .password(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{passwordEncoder}}().encode(\textcolor{stringliteral}{"{}password"{}}))}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .roles(\textcolor{stringliteral}{"{}ADMIN"{}})}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ UserDetails\ user\ =\ User.builder()}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .username(\textcolor{stringliteral}{"{}user"{}})}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .password(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{passwordEncoder}}().encode(\textcolor{stringliteral}{"{}password"{}}))}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .roles(\textcolor{stringliteral}{"{}USER"{}})}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ InMemoryUserDetailsManager(admin,\ user);}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_security_config_8java_source_l00053}00053\ \}}
+
+\end{DoxyCode}

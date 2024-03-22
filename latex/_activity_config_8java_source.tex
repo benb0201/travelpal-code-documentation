@@ -1,0 +1,47 @@
+\doxysection{Activity\+Config.\+java}
+\hypertarget{_activity_config_8java_source}{}\label{_activity_config_8java_source}\index{ActivityConfig.java@{ActivityConfig.java}}
+\mbox{\hyperlink{_activity_config_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00001}00001\ \textcolor{comment}{//package\ com.example.travelpal.configuration;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00002}00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00003}00003\ \textcolor{comment}{//import\ com.example.travelpal.DestinationList;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00004}00004\ \textcolor{comment}{//import\ com.example.travelpal.repository.ActivityRepository;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00005}00005\ \textcolor{comment}{//import\ com.example.travelpal.models.Activity;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00006}00006\ \textcolor{comment}{//import\ com.example.travelpal.repository.DestinationRepository;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00007}00007\ \textcolor{comment}{//import\ org.springframework.boot.CommandLineRunner;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00008}00008\ \textcolor{comment}{//import\ org.springframework.context.annotation.Bean;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00009}00009\ \textcolor{comment}{//import\ org.springframework.context.annotation.Configuration;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00010}00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00011}00011\ \textcolor{comment}{//import\ java.util.List;}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00012}00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00013}00013\ \textcolor{comment}{//@Configuration}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00014}00014\ \textcolor{comment}{//public\ class\ ActivityConfig\ \{}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00015}00015\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ @Bean}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00017}00017\ \textcolor{comment}{//\ \ \ \ public\ CommandLineRunner\ activityDataLoader(ActivityRepository\ activityRepository,\ DestinationRepository\ destinationRepository)\ \{}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ \ \ \ \ //\ Save\ the\ destinations\ to\ the\ database}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00019}00019\ \textcolor{comment}{//\ \ \ \ \ \ \ \ DestinationList\ destinationList\ =\ new\ DestinationList();}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00020}00020\ \textcolor{comment}{//\ \ \ \ \ \ \ \ destinationRepository.saveAll(destinationList.getDestinations());}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00021}00021\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ return\ args\ -\/>\ \{}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00023}00023\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ Activity\ activity1\ =\ new\ Activity(}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00024}00024\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Hiking"{},}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00025}00025\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Enjoy\ the\ great\ outdoors\ by\ hiking\ in\ scenic\ locations."{},}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00026}00026\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Mountain\ Trails"{},}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00027}00027\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 20.0}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00028}00028\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00029}00029\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00030}00030\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ Activity\ activity2\ =\ new\ Activity(}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00031}00031\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Museum\ Visit"{},}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00032}00032\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Explore\ local\ history\ and\ culture\ in\ museums."{},}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00033}00033\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Local\ Museum"{},}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00034}00034\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 10.0}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00035}00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00036}00036\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00037}00037\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ //\ Save\ the\ activities\ to\ the\ database}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00038}00038\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ activityRepository.saveAll(List.of(activity1,\ activity2));}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00039}00039\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \};}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00040}00040\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_activity_config_8java_source_l00041}00041\ \textcolor{comment}{//\}}}
+
+\end{DoxyCode}

@@ -1,0 +1,276 @@
+\doxysection{com.\+example.\+travelpal.\+client.\+Client\+Service\+Test Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test}{}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test}\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0388d3917b3abc4e979e1e4a9f31cab9}{set\+Up}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0c1cade9b2a452b80f80b249644c16ee}{get\+Clients}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a130b23daa3653bb2d373c468aab7e606}{can\+Add\+New\+Client}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a6e93b416b5411bef2c93aeaa2ef0316b}{will\+Return\+Failure\+Response\+When\+Email\+Is\+Taken}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a15e276943f2c2529e1d59cbb413c7034}{can\+Delete\+Client}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad5cad2af9cfc2820440e98b881d27008}{will\+Throw\+When\+Client\+Not\+Found\+By\+Id}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aed6e7a49ded33336dbe5a707e5436130}{will\+Throw\+If\+Client\+Does\+Not\+Exist}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}
+\item 
+Password\+Encoder \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aa191d036903872f8bdc4d7ab1fca2761}{encoder}} = new BCrypt\+Password\+Encoder()
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{Client\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00030}{30}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a130b23daa3653bb2d373c468aab7e606}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a130b23daa3653bb2d373c468aab7e606} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!canAddNewClient@{canAddNewClient}}
+\index{canAddNewClient@{canAddNewClient}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{canAddNewClient()}{canAddNewClient()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+can\+Add\+New\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00055}{55}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ given}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ RegisterDTO\ registerDTO\ =\ \textcolor{keyword}{new}\ RegisterDTO(}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ RegisterResponse\ registerResponse\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{registerClient}}(registerDTO);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ then}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ assertThat(registerResponse.getStatus()).isTrue();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ assertThat(registerResponse.getMessage()).isEqualTo(\textcolor{stringliteral}{"{}Registration\ Successful"{}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ ArgumentCaptor<Client>\ clientArgumentCaptor\ =\ ArgumentCaptor.forClass(Client.class);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ verify(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}).save(clientArgumentCaptor.capture());}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ Client\ capturedClient\ =\ clientArgumentCaptor.getValue();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ assertThat(capturedClient.getName()).isEqualTo(registerDTO.getName());}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ assertThat(capturedClient.getEmail()).isEqualTo(registerDTO.getEmail());}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adjust\ additional\ assertions\ based\ on\ your\ actual\ Client\ and\ RegisterDTO\ structures}}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a15e276943f2c2529e1d59cbb413c7034}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a15e276943f2c2529e1d59cbb413c7034} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!canDeleteClient@{canDeleteClient}}
+\index{canDeleteClient@{canDeleteClient}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{canDeleteClient()}{canDeleteClient()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+can\+Delete\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00111}{111}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ clientId\ =\ 3L;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mock\ the\ behavior\ of\ clientRepository.existsById}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ when(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}.existsById(clientId)).thenReturn(\textcolor{keyword}{true});}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mock\ the\ behavior\ of\ clientRepository.deleteById}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ doNothing().when(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}).deleteById(clientId);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{deleteClient}}(clientId);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ verify(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}).existsById(clientId);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ verify(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}).deleteById(clientId);}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0c1cade9b2a452b80f80b249644c16ee}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0c1cade9b2a452b80f80b249644c16ee} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!getClients@{getClients}}
+\index{getClients@{getClients}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{getClients()}{getClients()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+get\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00047}{47}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//when}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a16fa06df32cb5b3e01481dead345bf23}{getClients}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//then}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ verify(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}).findAll();}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0388d3917b3abc4e979e1e4a9f31cab9}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0388d3917b3abc4e979e1e4a9f31cab9} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!setUp@{setUp}}
+\index{setUp@{setUp}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00037}{37}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}\ =\ \textcolor{keyword}{new}\ ClientService(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}},\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aa191d036903872f8bdc4d7ab1fca2761}{encoder}});}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a6e93b416b5411bef2c93aeaa2ef0316b}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a6e93b416b5411bef2c93aeaa2ef0316b} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!willReturnFailureResponseWhenEmailIsTaken@{willReturnFailureResponseWhenEmailIsTaken}}
+\index{willReturnFailureResponseWhenEmailIsTaken@{willReturnFailureResponseWhenEmailIsTaken}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{willReturnFailureResponseWhenEmailIsTaken()}{willReturnFailureResponseWhenEmailIsTaken()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+will\+Return\+Failure\+Response\+When\+Email\+Is\+Taken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00085}{85}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ given}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ RegisterDTO\ registerDTO\ =\ \textcolor{keyword}{new}\ RegisterDTO(}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ given(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(registerDTO.getEmail()))}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .willReturn(Optional.of(\textcolor{keyword}{new}\ Client()));\ \textcolor{comment}{//\ You\ can\ create\ a\ dummy\ Client\ since\ the\ focus\ is\ on\ email\ existence\ check}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ RegisterResponse\ registerResponse\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{registerClient}}(registerDTO);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ then}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ assertThat(registerResponse.getStatus()).isFalse();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ assertThat(registerResponse.getMessage()).isEqualTo(\textcolor{stringliteral}{"{}Email\ is\ already\ registered"{}});}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ verify(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}},\ never()).save(any());}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aed6e7a49ded33336dbe5a707e5436130}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aed6e7a49ded33336dbe5a707e5436130} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!willThrowIfClientDoesNotExist@{willThrowIfClientDoesNotExist}}
+\index{willThrowIfClientDoesNotExist@{willThrowIfClientDoesNotExist}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{willThrowIfClientDoesNotExist()}{willThrowIfClientDoesNotExist()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+will\+Throw\+If\+Client\+Does\+Not\+Exist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00161}{161}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//given}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ Client\ client\ =\ \textcolor{keyword}{new}\ Client(}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ clientId\ =\ 3L;\ \textcolor{comment}{//\ Assuming\ a\ client\ with\ this\ ID\ does\ not\ exist}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Mock\ Client\ not\ existing}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ when(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}}.findById(clientId)).thenReturn(Optional.empty());}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ and\ Then}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ assertThatThrownBy(()\ -\/>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a184c8778ae6962dfa729c330118742a8}{updateClient}}(client,\ clientId))}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .isInstanceOf(EntityNotFoundException.class)}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .hasMessageContaining(\textcolor{stringliteral}{"{}Client\ with\ ID\ "{}}\ +\ clientId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}});}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad5cad2af9cfc2820440e98b881d27008}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad5cad2af9cfc2820440e98b881d27008} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!willThrowWhenClientNotFoundById@{willThrowWhenClientNotFoundById}}
+\index{willThrowWhenClientNotFoundById@{willThrowWhenClientNotFoundById}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{willThrowWhenClientNotFoundById()}{willThrowWhenClientNotFoundById()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+will\+Throw\+When\+Client\+Not\+Found\+By\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00130}{130}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ clientId\ =\ 3L;\ \textcolor{comment}{//\ Assuming\ a\ client\ with\ this\ ID\ does\ not\ exist}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ and\ Then}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ assertThatThrownBy(()\ -\/>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{deleteClient}}(clientId))}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .isInstanceOf(IllegalStateException.class)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .hasMessageContaining(\textcolor{stringliteral}{"{}Client\ with\ id:\ "{}}\ +\ clientId\ +\ \textcolor{stringliteral}{"{}\ does\ not\ exist"{}});}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aa191d036903872f8bdc4d7ab1fca2761}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aa191d036903872f8bdc4d7ab1fca2761} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!encoder@{encoder}}
+\index{encoder@{encoder}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{encoder}{encoder}}
+{\footnotesize\ttfamily Password\+Encoder com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+encoder = new BCrypt\+Password\+Encoder()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00033}{33}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!repository@{repository}}
+\index{repository@{repository}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{repository}{repository}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}} com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00032}{32}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619} 
+\index{com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}!service@{service}}
+\index{service@{service}!com.example.travelpal.client.ClientServiceTest@{com.example.travelpal.client.ClientServiceTest}}
+\doxysubsubsection{\texorpdfstring{service}{service}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{Client\+Service}} com.\+example.\+travelpal.\+client.\+Client\+Service\+Test.\+service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_service_test_8java_source_l00034}{34}} of file \mbox{\hyperlink{_client_service_test_8java_source}{Client\+Service\+Test.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_service_test_8java}{Client\+Service\+Test.\+java}}\end{DoxyCompactItemize}

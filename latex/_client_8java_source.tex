@@ -1,0 +1,131 @@
+\doxysection{Client.\+java}
+\hypertarget{_client_8java_source}{}\label{_client_8java_source}\index{Client.java@{Client.java}}
+\mbox{\hyperlink{_client_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.models;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00003}00003\ \textcolor{keyword}{import}\ jakarta.persistence.*;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.springframework.security.core.GrantedAuthority;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.UserDetails;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.time.LocalDate;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.time.Period;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.Collection;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.util.Set;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00014}00014\ @Entity}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00015}00015\ @Table(name\ =\ \textcolor{stringliteral}{"{}clients"{}})}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00016}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{00016}}\ public\ class\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00017}00017\ \ \ \ \ @Id}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00018}00018\ \ \ \ \ @GeneratedValue(strategy\ =\ GenerationType.SEQUENCE,\ generator\ =\ \textcolor{stringliteral}{"{}client\_sequence"{}})}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00019}00019\ \ \ \ \ @Column(name=\textcolor{stringliteral}{"{}client\_id"{}})}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00020}00020\ \ \ \ \ @SequenceGenerator(name\ =\ \textcolor{stringliteral}{"{}client\_sequence"{}},\ sequenceName\ =\ \textcolor{stringliteral}{"{}client\_sequence"{}},\ allocationSize\ =\ 1)}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00021}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1a4b75b3ab2b514eebb2ea773674152d}{00021}}\ \ \ \ \ private\ Long\ \textcolor{keywordtype}{id};}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00023}00023\ \ \ \ \ @Column(name\ =\ "{}client\_name"{})\textcolor{comment}{//(nullable\ =\ false)}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00024}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a14d92c43348481dc07c40fa854ab14d0}{00024}}\ \ \ \ \ private\ String\ name;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00026}00026\ \ \ \ \ @Column(name\ =\ "{}email"{})\textcolor{comment}{//(nullable\ =\ false,\ unique\ =\ true)}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00027}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a7c258c90fa72c0648864a53e76f9b92a}{00027}}\ \ \ \ \ private\ String\ email;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00029}00029\ \ \ \ \ @Column(name\ =\ "{}password"{})\textcolor{comment}{//(unique\ =\ true)}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00030}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a942f5d04899a36a48effc1e484ab410f}{00030}}\ \ \ \ \ private\ String\ password;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00032}00032\ \ \ \ \ @Column\textcolor{comment}{//(name\ =\ "{}date\_of\_birth"{})}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00033}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a464d15128070fe382d067f562d7af247}{00033}}\ \ \ \ \ private\ LocalDate\ dob;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00035}00035\ \ \ \ \ @Transient}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00036}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a520e6ddf6d62193fab00a52b06b24fb2}{00036}}\ \ \ \ \ private\ Integer\ age;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00038}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a62ff1907941efb514f73b87fb7a17192}{00038}}\ \ \ \ \ public\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00041}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a6de8a8763dccf3b6094a2523ae5b187a}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a6de8a8763dccf3b6094a2523ae5b187a}{Client}}(Long\ \textcolor{keywordtype}{id},}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ name,}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ email,}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ password,}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate\ dob\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ this.email\ =\ email;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ this.dob\ =\ dob;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ this.password\ =\ password;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00053}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a25a2dab0364a5aded58654dda8109c1e}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a25a2dab0364a5aded58654dda8109c1e}{Client}}(String\ name,}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ email,}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ password,}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate\ dob\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ this.email\ =\ email;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ this.dob\ =\ dob;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ this.password\ =\ password;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00062}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1b33e62110f02057c8753fc9026593a7}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1b33e62110f02057c8753fc9026593a7}{Client}}(Long\ \textcolor{keywordtype}{id},}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ String\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00067}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a2efd65d1b551da3aabadd3c057d8d16a}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a2efd65d1b551da3aabadd3c057d8d16a}{Client}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00071}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3ed51eb6dad978e18742ecad517b8991}{00071}}\ \ \ \ \ \textcolor{keyword}{public}\ Long\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3ed51eb6dad978e18742ecad517b8991}{getId}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ id;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00075}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a529e00df5e37641b55c8cd096d6dab5d}{00075}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a529e00df5e37641b55c8cd096d6dab5d}{setId}}(Long\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ this.id\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00079}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1a530b8e6b1735f15523189d14be6295}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1a530b8e6b1735f15523189d14be6295}{getName}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00083}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_accc0e12bd98ffaf7b29f2b578d341e61}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_accc0e12bd98ffaf7b29f2b578d341e61}{setName}}(String\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00087}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3c4cc5b8388dbbe475e5abe38c9a3b16}{00087}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3c4cc5b8388dbbe475e5abe38c9a3b16}{getEmail}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ email;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00091}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_aaa1230a302cd2011fed1e9736db7b74e}{00091}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_aaa1230a302cd2011fed1e9736db7b74e}{setEmail}}(String\ email)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ this.email\ =\ email;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00095}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a0d6b32db19b98a2044240c685d632ff0}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ LocalDate\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a0d6b32db19b98a2044240c685d632ff0}{getDob}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dob;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00099}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_ab74607c9e01202ba3fd286f6d4461e3f}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_ab74607c9e01202ba3fd286f6d4461e3f}{setDob}}(LocalDate\ dob)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ this.dob\ =\ dob;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00103}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a02bcf8ae5e587afe17fec3c2883279b3}{00103}}\ \ \ \ \ \textcolor{keyword}{public}\ Integer\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a02bcf8ae5e587afe17fec3c2883279b3}{getAge}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.age\ =\ Period.between(dob,\ LocalDate.now()).getYears();}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00107}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a075f0b20ddff82619cc2bb14637bf3aa}{00107}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a075f0b20ddff82619cc2bb14637bf3aa}{setAge}}(Integer\ age)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ this.age\ =\ age;}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00111}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a6136a2f09d53a29c5977dd5ff4540f26}{00111}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a6136a2f09d53a29c5977dd5ff4540f26}{getPassword}}()\ \{\ \textcolor{keywordflow}{return}\ password;\ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00113}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a960c95700f1985bb97ec943433008e2b}{00113}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a960c95700f1985bb97ec943433008e2b}{setPassword}}(String\ password)\ \{\ this.password\ =\ password;\ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00115}00115\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00116}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a13f39399c8f217dde02b9cec96337f4e}{00116}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a13f39399c8f217dde02b9cec96337f4e}{toString}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Client\{"{}}\ +}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}id="{}}\ +\ \textcolor{keywordtype}{id}\ +}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ name='"{}}\ +\ name\ +\ \textcolor{charliteral}{'\(\backslash\)''}\ +}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ email='"{}}\ +\ email\ +\ \textcolor{charliteral}{'\(\backslash\)''}\ +}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ dob="{}}\ +\ dob\ +}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ age="{}}\ +\ age\ +}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'\}'};}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_8java_source_l00125}00125\ \}}
+
+\end{DoxyCode}

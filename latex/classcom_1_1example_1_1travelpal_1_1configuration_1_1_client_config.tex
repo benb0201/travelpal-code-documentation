@@ -1,0 +1,57 @@
+\doxysection{com.\+example.\+travelpal.\+configuration.\+Client\+Config Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_client_config}{}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_client_config}\index{com.example.travelpal.configuration.ClientConfig@{com.example.travelpal.configuration.ClientConfig}}
+\doxysubsubsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+Command\+Line\+Runner \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_client_config_a0a70ed181764cbc3ba60f1798c1fc3f3}{command\+Line\+Runner}} (\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}} repository)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_client_config_8java_source_l00065}{65}} of file \mbox{\hyperlink{_client_config_8java_source}{Client\+Config.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_client_config_a0a70ed181764cbc3ba60f1798c1fc3f3}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_client_config_a0a70ed181764cbc3ba60f1798c1fc3f3} 
+\index{com.example.travelpal.configuration.ClientConfig@{com.example.travelpal.configuration.ClientConfig}!commandLineRunner@{commandLineRunner}}
+\index{commandLineRunner@{commandLineRunner}!com.example.travelpal.configuration.ClientConfig@{com.example.travelpal.configuration.ClientConfig}}
+\doxysubsubsection{\texorpdfstring{commandLineRunner()}{commandLineRunner()}}
+{\footnotesize\ttfamily Command\+Line\+Runner com.\+example.\+travelpal.\+configuration.\+Client\+Config.\+command\+Line\+Runner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}}}]{repository }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_config_8java_source_l00068}{68}} of file \mbox{\hyperlink{_client_config_8java_source}{Client\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ args\ -\/>\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ Client\ angel\ =\ \textcolor{keyword}{new}\ Client(}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Angel"{}},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}angel.a@tmail.com"{}},}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2003,\ OCTOBER,\ 2)}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ Client\ ben\ =\ \textcolor{keyword}{new}\ Client(}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Ben"{}},}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ben.o@tmail.com"{}},}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password2"{}},}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2002,\ JANUARY,\ 15)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ repository.saveAll(}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List.of(angel\ ,ben)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_config_8java}{Client\+Config.\+java}}\end{DoxyCompactItemize}

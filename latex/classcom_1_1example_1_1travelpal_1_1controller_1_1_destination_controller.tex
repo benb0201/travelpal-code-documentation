@@ -1,0 +1,136 @@
+\doxysection{com.\+example.\+travelpal.\+controller.\+Destination\+Controller Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller}{}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller}\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a496d170d058b2e548138ad7f68b2b6b2}{Destination\+Controller}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service}{Destination\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destination\+Service}})
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_aa2b84e2da12da14b1eaa6445330e3c62}{get\+Destinations}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_ac29f1dc064e96115f8863c54bca43712}{register\+Destination}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}} destination)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a03382e84e4835195939297927d1737bc}{delete\+Destination}} (@Path\+Variable("{}destinationid"{}) Long destination\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a633dd45f75b66ea768bd7ed6235159b4}{update\+Destination}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}} destination, @Path\+Variable("{}destinationid"{}) Long destination\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service}{Destination\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destination\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00012}{12}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a496d170d058b2e548138ad7f68b2b6b2}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a496d170d058b2e548138ad7f68b2b6b2} 
+\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}!DestinationController@{DestinationController}}
+\index{DestinationController@{DestinationController}!com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection{\texorpdfstring{DestinationController()}{DestinationController()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+controller.\+Destination\+Controller.\+Destination\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service}{Destination\+Service}}}]{destination\+Service }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00016}{16}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ this.destinationService\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destinationService}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a03382e84e4835195939297927d1737bc}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a03382e84e4835195939297927d1737bc} 
+\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}!deleteDestination@{deleteDestination}}
+\index{deleteDestination@{deleteDestination}!com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection{\texorpdfstring{deleteDestination()}{deleteDestination()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Destination\+Controller.\+delete\+Destination (\begin{DoxyParamCaption}\item[{@Path\+Variable("{}destinationid"{}) Long}]{destination\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00031}{31}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destinationService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service_a6b1340c60e13c200971ed253f4af02dd}{deleteDestination}}(destinationId);}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_aa2b84e2da12da14b1eaa6445330e3c62}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_aa2b84e2da12da14b1eaa6445330e3c62} 
+\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}!getDestinations@{getDestinations}}
+\index{getDestinations@{getDestinations}!com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection{\texorpdfstring{getDestinations()}{getDestinations()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}} $>$ com.\+example.\+travelpal.\+controller.\+Destination\+Controller.\+get\+Destinations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00021}{21}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destinationService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service_a5990945ed87c2b6786ab95571afc4f0c}{getDestinations}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_ac29f1dc064e96115f8863c54bca43712}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_ac29f1dc064e96115f8863c54bca43712} 
+\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}!registerDestination@{registerDestination}}
+\index{registerDestination@{registerDestination}!com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection{\texorpdfstring{registerDestination()}{registerDestination()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Destination\+Controller.\+register\+Destination (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}}]{destination }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00026}{26}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destinationService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service_a179ddfbafddf3fcf09dc9d84b3c48bc6}{addNewDestination}}(destination);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a633dd45f75b66ea768bd7ed6235159b4}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a633dd45f75b66ea768bd7ed6235159b4} 
+\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}!updateDestination@{updateDestination}}
+\index{updateDestination@{updateDestination}!com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection{\texorpdfstring{updateDestination()}{updateDestination()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Destination\+Controller.\+update\+Destination (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_destination}{Destination}}}]{destination,  }\item[{@Path\+Variable("{}destinationid"{}) Long}]{destination\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00036}{36}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}{destinationService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service_a7d73fe1b36349c089aa6eee995e97473}{updateDestination}}(destination,destinationId);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller_a6d348ee7257abcffa49043027ff2901d} 
+\index{com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}!destinationService@{destinationService}}
+\index{destinationService@{destinationService}!com.example.travelpal.controller.DestinationController@{com.example.travelpal.controller.DestinationController}}
+\doxysubsubsection{\texorpdfstring{destinationService}{destinationService}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service}{Destination\+Service}} com.\+example.\+travelpal.\+controller.\+Destination\+Controller.\+destination\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_destination_controller_8java_source_l00013}{13}} of file \mbox{\hyperlink{_destination_controller_8java_source}{Destination\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_destination_controller_8java}{Destination\+Controller.\+java}}\end{DoxyCompactItemize}

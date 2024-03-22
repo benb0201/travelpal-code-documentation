@@ -1,0 +1,25 @@
+var classcom_1_1example_1_1travelpal_1_1models_1_1_transport =
+[
+    [ "Transport", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ab16feb2e10cbfeb42ada8c14962d2199", null ],
+    [ "Transport", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a7616326a4a85d1438e87a184a62dda08", null ],
+    [ "Transport", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ae60ebc5f076cc0addf78662e1c5a5a92", null ],
+    [ "getCost", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a37686d50373a95167aae7e090c52f7d6", null ],
+    [ "getDescription", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ab666b923204ca479a6a71713df967a03", null ],
+    [ "getDestinations", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#aa74ac1e9b39e54134c948a24a310de0a", null ],
+    [ "getId", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ab4704497a22e551cb60e045e244ddfcd", null ],
+    [ "getName", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a625b1abd413a2821d4e21127354da070", null ],
+    [ "getType", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ae68af938996862d84face37ac2152183", null ],
+    [ "setCost", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a8612ece1e73a45e4adba716531a2de83", null ],
+    [ "setDescription", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ac88374edcb7e07f4f7660c599f107998", null ],
+    [ "setDestinations", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a8876b10432846eef323746c8573aa8c7", null ],
+    [ "setId", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a091a1f6739c82400cd37612c7b81bbe9", null ],
+    [ "setName", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#ab30a43fe89d223df05d67427477abda1", null ],
+    [ "setType", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a46cf6f7303ba62ba330404080e1ca732", null ],
+    [ "toString", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a23a401c02747cee3eefd6345eb7d4edd", null ],
+    [ "cost", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a883578f1c84229f600fcd16859094fc6", null ],
+    [ "description", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a9420e6a27b3a55ac783cc4c32e2623fc", null ],
+    [ "destinations", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a0cf144e1aa1835703812c63eb6990cc8", null ],
+    [ "id", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a3575d201ed08d118e5094adddef06067", null ],
+    [ "name", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#a3b4f87d1fcb1ce61160dbfa9389d7758", null ],
+    [ "type", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html#afc09f8c753e4d313e3e6a9da2cea9428", null ]
+];

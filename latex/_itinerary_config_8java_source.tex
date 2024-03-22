@@ -1,0 +1,55 @@
+\doxysection{Itinerary\+Config.\+java}
+\hypertarget{_itinerary_config_8java_source}{}\label{_itinerary_config_8java_source}\index{ItineraryConfig.java@{ItineraryConfig.java}}
+\mbox{\hyperlink{_itinerary_config_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.configuration;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Activity;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.models.Client;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00005}00005\ \textcolor{keyword}{import}\ com.example.travelpal.models.Itinerary;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00006}00006\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ActivityRepository;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00007}00007\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ClientRepository;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00008}00008\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ItineraryRepository;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.springframework.boot.CommandLineRunner;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.springframework.context.annotation.Bean;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00011}00011\ \textcolor{keyword}{import}\ org.springframework.context.annotation.Configuration;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.time.LocalDate;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00014}00014\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00016}00016\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ java.time.Month.AUGUST;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00017}00017\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ java.time.Month.JULY;}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00019}00019\ @Configuration}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00020}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config}{00020}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config}{ItineraryConfig}}\ \{}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00021}00021\ \ \ \ \ @Bean}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00022}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config_a5b68b85a53a6ee88ff709852c16293a7}{00022}}\ \ \ \ \ CommandLineRunner\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config_a5b68b85a53a6ee88ff709852c16293a7}{commandLineRunner}}(\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_itinerary_repository}{ItineraryRepository}}\ itineraryRepository,\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{ClientRepository}}\ clientRepository,\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_activity_repository}{ActivityRepository}}\ activityRepository)\ \{}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ args\ -\/>\ \{}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ activities\ for\ the\ first\ itinerary}}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}(\textcolor{stringliteral}{"{}Visit\ Eiffel\ Tower"{}},\ \textcolor{stringliteral}{"{}Tour\ of\ the\ Eiffel\ Tower"{}},\ \textcolor{stringliteral}{"{}Paris,\ France"{}},\ 50.0);}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}(\textcolor{stringliteral}{"{}Boat\ Tour"{}},\ \textcolor{stringliteral}{"{}Boat\ tour\ on\ the\ Seine\ River"{}},\ \textcolor{stringliteral}{"{}Paris,\ France"{}},\ 30.0);}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ activities\ for\ the\ second\ itinerary}}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}(\textcolor{stringliteral}{"{}City\ Tour"{}},\ \textcolor{stringliteral}{"{}Tour\ of\ Amsterdam"{}},\ \textcolor{stringliteral}{"{}Amsterdam"{}},\ 40.0);}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity4\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}(\textcolor{stringliteral}{"{}Museum\ Visit"{}},\ \textcolor{stringliteral}{"{}Visit\ to\ the\ Van\ Gogh\ Museum"{}},\ \textcolor{stringliteral}{"{}Amsterdam"{}},\ 25.0);}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ and\ save\ clients}}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}(\textcolor{stringliteral}{"{}Alice"{}},\ \textcolor{stringliteral}{"{}alice@example.com"{}},\ \textcolor{stringliteral}{"{}password1"{}},\ LocalDate.of(1990,\ JULY,\ 15));}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}(\textcolor{stringliteral}{"{}Bob"{}},\ \textcolor{stringliteral}{"{}bob@example.com"{}},\ \textcolor{stringliteral}{"{}password2"{}},\ LocalDate.of(1985,\ AUGUST,\ 25));}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ clientRepository.saveAll(List.of(client1,\ client2));}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ and\ save\ itineraries}}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}}\ itinerary1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}}(\textcolor{stringliteral}{"{}Summer\ Vacation"{}},\ \textcolor{stringliteral}{"{}Exploring\ Europe"{}},\ LocalDate.of(2023,\ JULY,\ 1),\ LocalDate.of(2023,\ JULY,\ 5),}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Paris,\ France"{}},\ \textcolor{stringliteral}{"{}Don't\ forget\ camera!"{}},\ \textcolor{stringliteral}{"{}Hotel\ in\ Paris\ (can\ be\ more\ specific/vague)"{}},\ 200.00,\ client1,\ List.of(activity1,\ activity2));}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}}\ itinerary2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary}{Itinerary}}(\textcolor{stringliteral}{"{}City\ Break"{}},\ \textcolor{stringliteral}{"{}Quick\ getaway"{}},\ LocalDate.of(2023,\ AUGUST,\ 10),\ LocalDate.of(2023,\ AUGUST,\ 15),}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Amsterdam"{}},\ \textcolor{stringliteral}{"{}Reserve\ restaurant\ tickets\ at\ amsterdameats.com"{}},\ \textcolor{stringliteral}{"{}TravelLodge"{}},\ 150.00,\ client2,\ List.of(activity3,\ activity4));}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ itinerary1.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary_a3fed9897858b5a54b95607b5c5f14755}{calculateEstimatedCost}}();}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ itinerary2.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary_a3fed9897858b5a54b95607b5c5f14755}{calculateEstimatedCost}}();}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ itineraryRepository.saveAll(List.of(itinerary1,\ itinerary2));}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_itinerary_config_8java_source_l00049}00049\ \}}
+
+\end{DoxyCode}

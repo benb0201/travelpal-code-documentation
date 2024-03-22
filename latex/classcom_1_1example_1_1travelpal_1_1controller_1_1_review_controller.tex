@@ -1,0 +1,136 @@
+\doxysection{com.\+example.\+travelpal.\+controller.\+Review\+Controller Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller}{}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller}\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ac65cd712aa1156d31d9ad5673e652ec9}{Review\+Controller}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{Review\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{review\+Service}})
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_aa5890e15e9b762304b36751b9f2614d0}{get\+Reviews}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ad725e87c7cc8daecd420b2ff2e675808}{register\+Review}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}} review)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5d8998600bb64b905228ef6e2a9cda45}{delete\+Review}} (@Path\+Variable Long review\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5ee4ec701cb3164340888ef3a28a8420}{update\+Review}} (@Path\+Variable Long review\+Id, @Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}} review)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{Review\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{review\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00012}{12}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ac65cd712aa1156d31d9ad5673e652ec9}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ac65cd712aa1156d31d9ad5673e652ec9} 
+\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}!ReviewController@{ReviewController}}
+\index{ReviewController@{ReviewController}!com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection{\texorpdfstring{ReviewController()}{ReviewController()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+controller.\+Review\+Controller.\+Review\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{Review\+Service}}}]{review\+Service }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00016}{16}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ this.reviewService\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{reviewService}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5d8998600bb64b905228ef6e2a9cda45}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5d8998600bb64b905228ef6e2a9cda45} 
+\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}!deleteReview@{deleteReview}}
+\index{deleteReview@{deleteReview}!com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection{\texorpdfstring{deleteReview()}{deleteReview()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Review\+Controller.\+delete\+Review (\begin{DoxyParamCaption}\item[{@Path\+Variable Long}]{review\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00031}{31}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{reviewService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a7f27a04be9017635edbc3023334050ea}{deleteReview}}(reviewId);}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_aa5890e15e9b762304b36751b9f2614d0}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_aa5890e15e9b762304b36751b9f2614d0} 
+\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}!getReviews@{getReviews}}
+\index{getReviews@{getReviews}!com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection{\texorpdfstring{getReviews()}{getReviews()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}} $>$ com.\+example.\+travelpal.\+controller.\+Review\+Controller.\+get\+Reviews (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00021}{21}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{reviewService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_abacd15771a68adb50d7a837e8e4f2316}{getReviews}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ad725e87c7cc8daecd420b2ff2e675808}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ad725e87c7cc8daecd420b2ff2e675808} 
+\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}!registerReview@{registerReview}}
+\index{registerReview@{registerReview}!com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection{\texorpdfstring{registerReview()}{registerReview()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Review\+Controller.\+register\+Review (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}}]{review }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00026}{26}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{reviewService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a10f00b5d01617a408aab0ff26bb188b5}{addNewReview}}(review);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5ee4ec701cb3164340888ef3a28a8420}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5ee4ec701cb3164340888ef3a28a8420} 
+\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}!updateReview@{updateReview}}
+\index{updateReview@{updateReview}!com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection{\texorpdfstring{updateReview()}{updateReview()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Review\+Controller.\+update\+Review (\begin{DoxyParamCaption}\item[{@Path\+Variable Long}]{review\+Id,  }\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}}]{review }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00036}{36}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{reviewService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a2622171fa2d7a27388dcd95677f935be}{updateReview}}(review,\ reviewId);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d} 
+\index{com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}!reviewService@{reviewService}}
+\index{reviewService@{reviewService}!com.example.travelpal.controller.ReviewController@{com.example.travelpal.controller.ReviewController}}
+\doxysubsubsection{\texorpdfstring{reviewService}{reviewService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{Review\+Service}} com.\+example.\+travelpal.\+controller.\+Review\+Controller.\+review\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_review_controller_8java_source_l00013}{13}} of file \mbox{\hyperlink{_review_controller_8java_source}{Review\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_review_controller_8java}{Review\+Controller.\+java}}\end{DoxyCompactItemize}

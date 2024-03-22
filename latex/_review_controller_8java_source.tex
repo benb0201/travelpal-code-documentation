@@ -1,0 +1,45 @@
+\doxysection{Review\+Controller.\+java}
+\hypertarget{_review_controller_8java_source}{}\label{_review_controller_8java_source}\index{ReviewController.java@{ReviewController.java}}
+\mbox{\hyperlink{_review_controller_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.controller;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Review;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.service.ReviewService;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.*;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00010}00010\ @RestController}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00011}00011\ @RequestMapping(path\ =\ \textcolor{stringliteral}{"{}api/v1/review"{}})}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00012}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller}{00012}}\ public\ class\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller}{ReviewController}}\ \{}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00013}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{00013}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{ReviewService}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a6a9ff27480c758ba479f51e9394c058d}{reviewService}};}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00015}00015\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00016}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ac65cd712aa1156d31d9ad5673e652ec9}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ac65cd712aa1156d31d9ad5673e652ec9}{ReviewController}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service}{ReviewService}}\ reviewService)\ \{}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00017}00017\ \ \ \ \ \ \ \ \ this.reviewService\ =\ reviewService;}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00020}00020\ \ \ \ \ @GetMapping}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00021}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_aa5890e15e9b762304b36751b9f2614d0}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Review>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_aa5890e15e9b762304b36751b9f2614d0}{getReviews}}()\{}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ reviewService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_abacd15771a68adb50d7a837e8e4f2316}{getReviews}}();}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00025}00025\ \ \ \ \ @PostMapping}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00026}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ad725e87c7cc8daecd420b2ff2e675808}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_ad725e87c7cc8daecd420b2ff2e675808}{registerReview}}(@RequestBody\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}\ review)\{}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ reviewService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a10f00b5d01617a408aab0ff26bb188b5}{addNewReview}}(review);}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00030}00030\ \ \ \ \ @DeleteMapping(path\ =\ \textcolor{stringliteral}{"{}\{reviewid\}"{}})}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00031}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5d8998600bb64b905228ef6e2a9cda45}{00031}}\ \ \ \ \ public\ \textcolor{keywordtype}{void}\ deleteReview(@PathVariable\ Long\ reviewId)\{}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ reviewService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a7f27a04be9017635edbc3023334050ea}{deleteReview}}(reviewId);}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00035}00035\ \ \ \ \ @PutMapping(path\ =\ \textcolor{stringliteral}{"{}\{reviewid\}"{}})}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00036}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller_a5ee4ec701cb3164340888ef3a28a8420}{00036}}\ \ \ \ \ public\ \textcolor{keywordtype}{void}\ updateReview(@PathVariable\ Long\ reviewId,\ @RequestBody\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_review}{Review}}\ review)\{}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ reviewService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_review_service_a2622171fa2d7a27388dcd95677f935be}{updateReview}}(review,\ reviewId);}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_review_controller_8java_source_l00039}00039\ \}}
+
+\end{DoxyCode}

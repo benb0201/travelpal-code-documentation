@@ -1,0 +1,64 @@
+\doxysection{Client\+Repository\+Test.\+java}
+\hypertarget{_client_repository_test_8java_source}{}\label{_client_repository_test_8java_source}\index{ClientRepositoryTest.java@{ClientRepositoryTest.java}}
+\mbox{\hyperlink{_client_repository_test_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00001}\mbox{\hyperlink{namespacecom_1_1example_1_1travelpal_1_1client}{00001}}\ \textcolor{keyword}{package\ }com.example.travelpal.client;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Client;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ClientRepository;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.junit.jupiter.api.AfterEach;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.time.LocalDate;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.time.Month;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00014}00014\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.assertj.core.api.AssertionsForClassTypes.assertThat;}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00016}00016\ @DataJpaTest}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00017}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test}{00017}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test}{ClientRepositoryTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00019}00019\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00020}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{00020}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{ClientRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}};}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//After\ each\ test,\ clear\ database\ for\ the\ next\ test}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00023}00023\ \ \ \ \ @AfterEach}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00024}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a0f044afe6687c43fdd4ee1329746f416}{00024}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a0f044afe6687c43fdd4ee1329746f416}{tearDown}}()\{}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.deleteAll();}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00028}00028\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00029}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a48741ad4f2b59ab7ae24b7c905f4c109}{00029}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a48741ad4f2b59ab7ae24b7c905f4c109}{testFindClientByEmail}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}(}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}qwerty12"{}},}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.save(client);\ \textcolor{comment}{//\ Save\ the\ client\ to\ the\ database}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ Optional<Client>\ foundClient\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(email);}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ assertThat(foundClient).isPresent();\ \textcolor{comment}{//\ Ensure\ the\ client\ is\ found}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ assertThat(foundClient.get().getName()).isEqualTo(\textcolor{stringliteral}{"{}Friend"{}});\ \textcolor{comment}{//\ Check\ other\ properties\ as\ needed}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00049}00049\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00050}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a7b38b878a6afa31b88ab2ec1eea9dbc1}{00050}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a7b38b878a6afa31b88ab2ec1eea9dbc1}{testFindClientByEmailNotFound}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ searching\ for\ a\ non-\/existent\ email}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ String\ nonExistentEmail\ =\ \textcolor{stringliteral}{"{}nonexistent@example.com"{}};}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ Optional<Client>\ foundClient\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(nonExistentEmail);}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ assertThat(foundClient).isNotPresent();\ \textcolor{comment}{//\ Ensure\ the\ result\ is\ empty}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_repository_test_8java_source_l00058}00058\ \}}
+
+\end{DoxyCode}

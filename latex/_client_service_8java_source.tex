@@ -1,0 +1,124 @@
+\doxysection{Client\+Service.\+java}
+\hypertarget{_client_service_8java_source}{}\label{_client_service_8java_source}\index{ClientService.java@{ClientService.java}}
+\mbox{\hyperlink{_client_service_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.service;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.dto.LoginDTO;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.dto.RegisterDTO;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00005}00005\ \textcolor{keyword}{import}\ com.example.travelpal.models.Client;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00006}00006\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ClientRepository;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00007}00007\ \textcolor{keyword}{import}\ com.example.travelpal.response.LoginResponse;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00008}00008\ \textcolor{keyword}{import}\ com.example.travelpal.response.RegisterResponse;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00009}00009\ \textcolor{keyword}{import}\ jakarta.persistence.EntityNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00011}00011\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.UserDetails;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00012}00012\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.UserDetailsService;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00013}00013\ \textcolor{keyword}{import}\ org.springframework.security.core.userdetails.UsernameNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00014}00014\ \textcolor{keyword}{import}\ org.springframework.security.crypto.password.PasswordEncoder;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00015}00015\ \textcolor{keyword}{import}\ org.springframework.stereotype.Service;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00018}00018\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00020}00020\ @Service\ \textcolor{comment}{//Makes\ this\ class\ recognised\ as\ a\ Spring\ Bean}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00021}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{00021}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{ClientService}}\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00023}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{00023}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{ClientRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}};}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00025}00025\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00026}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ace205fa2c8e13168422cd416a67fc37b}{00026}}\ \ \ \ \ \textcolor{keyword}{private}\ PasswordEncoder\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ace205fa2c8e13168422cd416a67fc37b}{encoder}};}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00028}00028\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00029}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a63b3485382324577226093ab55256144}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a63b3485382324577226093ab55256144}{ClientService}}(\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{ClientRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}},\ PasswordEncoder\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ace205fa2c8e13168422cd416a67fc37b}{encoder}})\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ this.clientRepository\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}};}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ this.encoder\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ace205fa2c8e13168422cd416a67fc37b}{encoder}};}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00034}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a7f5404e471dfb6baccee7553667b99a4}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a7f5404e471dfb6baccee7553667b99a4}{getClientById}}(Long\ clientId)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.findById(clientId)}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .orElseThrow(()\ -\/>\ \textcolor{keyword}{new}\ EntityNotFoundException(\textcolor{stringliteral}{"{}Client\ with\ ID\ "{}}\ +\ clientId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}}));}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00039}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a16fa06df32cb5b3e01481dead345bf23}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Client>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a16fa06df32cb5b3e01481dead345bf23}{getClients}}()\{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.findAll();}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ Modified\ addNewClient\ method\ to\ directly\ return\ a\ RegisterResponse}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00044}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response}{RegisterResponse}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{registerClient}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{RegisterDTO}}\ registerDTO)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ Optional<Client>\ clientOptional\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_ad5ea9db5d3359185bafd637cf2d54262}{getEmail}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clientOptional.isPresent())\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ email\ is\ already\ taken,\ return\ a\ RegisterResponse\ indicating\ failure}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response}{RegisterResponse}}(\textcolor{stringliteral}{"{}Email\ is\ already\ registered"{}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Encode\ the\ password\ before\ saving\ to\ the\ database}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ String\ encodedPassword\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ace205fa2c8e13168422cd416a67fc37b}{encoder}}.encode(registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_a4b32bb82c893249babe6541a3578501a}{getPassword}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ a\ new\ Client\ object\ with\ the\ provided\ details}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}(}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_ada7eff5e97402bb76f40a305c7a4beca}{getName}}(),}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_ad5ea9db5d3359185bafd637cf2d54262}{getEmail}}(),}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ encodedPassword,}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_a7e5b26c04b54d721a5a97746cf7bd986}{getDob}}()}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ new\ client\ to\ the\ database}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ savedClient\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.save(client1);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ System.out.println(savedClient);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Return\ a\ RegisterResponse\ indicating\ successful\ registration}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response}{RegisterResponse}}(\textcolor{stringliteral}{"{}Registration\ Successful"{}},\ \textcolor{keyword}{true},\ savedClient.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3ed51eb6dad978e18742ecad517b8991}{getId}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00071}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_accc39fb0d6d71af96cdcfb8be83cbfd2}{00071}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_login_response}{LoginResponse}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_accc39fb0d6d71af96cdcfb8be83cbfd2}{loginClient}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_login_d_t_o}{LoginDTO}}\ loginDTO)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ Optional<Client>\ clientOptional\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(loginDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_login_d_t_o_a9940cae98b2f3869ecc027fc714e5092}{getEmail}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clientOptional.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ no\ client\ with\ the\ given\ email\ exists,\ indicate\ email\ does\ not\ exist}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_login_response}{LoginResponse}}(\textcolor{stringliteral}{"{}Email\ does\ not\ exist"{}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client\ =\ clientOptional.get();}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ String\ password\ =\ loginDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_login_d_t_o_a21d306ec323899c388389bc144119bbf}{getPassword}}();\ \textcolor{comment}{//\ Get\ the\ entered\ password\ from\ the\ loginDTO}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ String\ encodedPassword\ =\ client.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a6136a2f09d53a29c5977dd5ff4540f26}{getPassword}}();\ \textcolor{comment}{//\ Get\ the\ encoded\ password\ from\ the\ retrieved\ client}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ entered\ password\ matches\ the\ encoded\ password}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ isPwdRight\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ace205fa2c8e13168422cd416a67fc37b}{encoder}}.matches(password,\ encodedPassword);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Return\ a\ LoginResponse\ based\ on\ the\ result\ of\ finding\ the\ client\ by\ email\ and\ password}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_login_response}{LoginResponse}}(isPwdRight\ ?\ \textcolor{stringliteral}{"{}Login\ Success"{}}\ :\ \textcolor{stringliteral}{"{}Password\ does\ not\ match"{}},\ isPwdRight,\ client.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3ed51eb6dad978e18742ecad517b8991}{getId}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00091}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{00091}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{deleteClient}}(Long\ clientId)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ exists\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.existsById(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!exists)\{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalStateException(\textcolor{stringliteral}{"{}Client\ with\ id:\ "{}}+clientId+\textcolor{stringliteral}{"{}\ does\ not\ exist"{}});}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.deleteById(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00098}00098\ \textcolor{comment}{//\ \ \ \ @Transactional}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00099}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a184c8778ae6962dfa729c330118742a8}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a184c8778ae6962dfa729c330118742a8}{updateClient}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client,\ Long\ clientId)\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ Optional<Client>\ clientOptional\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.findById(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clientOptional.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00102}00102\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ throw\ new\ EntityNotFoundException("{}Client\ with\ ID\ "{}\ +\ clientId\ +\ "{}\ not\ found"{});}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ existing\ client\ from\ the\ Optional}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ existingClient\ =\ clientOptional.get();}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ attributes\ of\ the\ existing\ client\ with\ the\ values\ from\ the\ new\ client}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ existingClient.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_accc0e12bd98ffaf7b29f2b578d341e61}{setName}}(client.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1a530b8e6b1735f15523189d14be6295}{getName}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ existingClient.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_aaa1230a302cd2011fed1e9736db7b74e}{setEmail}}(client.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3c4cc5b8388dbbe475e5abe38c9a3b16}{getEmail}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ existingClient.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_ab74607c9e01202ba3fd286f6d4461e3f}{setDob}}(client.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a0d6b32db19b98a2044240c685d632ff0}{getDob}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ updated\ client\ back\ to\ the\ repository}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_ae06041622a8ba174efa2b13194c41ed4}{clientRepository}}.save(existingClient);}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_8java_source_l00118}00118\ \}}
+
+\end{DoxyCode}

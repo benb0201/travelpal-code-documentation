@@ -1,0 +1,182 @@
+\doxysection{com.\+example.\+travelpal.\+controller.\+Client\+Controller Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller}{}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller}\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a45c2cb1823dbf41c468c30a0bc46a192}{Client\+Controller}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{Client\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{client\+Service}})
+\item 
+Response\+Entity$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ad822516737f5b25d24f402bb8e9c8fbc}{get\+Client\+By\+Id}} (@Path\+Variable("{}clientid"{}) Long client\+Id)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1831ae1cbcc24ecf9d602d7f0d03171e}{get\+Clients}} ()
+\item 
+Response\+Entity$<$?$>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ac76d6e70b9376701c2189f49f0a3dd9e}{register\+Client}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{Register\+DTO}} register\+DTO)
+\item 
+Response\+Entity$<$?$>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a437559e31a9b57b72e796230e40681a6}{login\+Client}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_login_d_t_o}{Login\+DTO}} login\+DTO)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ae1794a4f52594465ec2d88f9827d95af}{delete\+Client}} (@Path\+Variable("{}clientid"{}) Long client\+Id)
+\item 
+Response\+Entity$<$?$>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a4e9ea86b75f4dec89500e6cf3db9feea}{update\+Client}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}} client, @Path\+Variable("{}clientid"{}) Long client\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{Client\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{client\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00017}{17}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a45c2cb1823dbf41c468c30a0bc46a192}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a45c2cb1823dbf41c468c30a0bc46a192} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!ClientController@{ClientController}}
+\index{ClientController@{ClientController}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{ClientController()}{ClientController()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+Client\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{Client\+Service}}}]{client\+Service }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00021}{21}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ this.clientService\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}};}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ae1794a4f52594465ec2d88f9827d95af}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ae1794a4f52594465ec2d88f9827d95af} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!deleteClient@{deleteClient}}
+\index{deleteClient@{deleteClient}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{deleteClient()}{deleteClient()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+delete\+Client (\begin{DoxyParamCaption}\item[{@Path\+Variable("{}clientid"{}) Long}]{client\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00049}{49}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{deleteClient}}(clientId);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ad822516737f5b25d24f402bb8e9c8fbc}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ad822516737f5b25d24f402bb8e9c8fbc} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!getClientById@{getClientById}}
+\index{getClientById@{getClientById}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{getClientById()}{getClientById()}}
+{\footnotesize\ttfamily Response\+Entity$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}} $>$ com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+get\+Client\+By\+Id (\begin{DoxyParamCaption}\item[{@Path\+Variable("{}clientid"{}) Long}]{client\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00026}{26}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Client\ client\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a7f5404e471dfb6baccee7553667b99a4}{getClientById}}(clientId);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(client);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1831ae1cbcc24ecf9d602d7f0d03171e}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1831ae1cbcc24ecf9d602d7f0d03171e} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!getClients@{getClients}}
+\index{getClients@{getClients}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{getClients()}{getClients()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}} $>$ com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+get\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00032}{32}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a16fa06df32cb5b3e01481dead345bf23}{getClients}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a437559e31a9b57b72e796230e40681a6}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a437559e31a9b57b72e796230e40681a6} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!loginClient@{loginClient}}
+\index{loginClient@{loginClient}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{loginClient()}{loginClient()}}
+{\footnotesize\ttfamily Response\+Entity$<$?$>$ com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+login\+Client (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_login_d_t_o}{Login\+DTO}}}]{login\+DTO }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00043}{43}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ LoginResponse\ loginResponse\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_accc39fb0d6d71af96cdcfb8be83cbfd2}{loginClient}}(loginDTO);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(loginResponse);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ac76d6e70b9376701c2189f49f0a3dd9e}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_ac76d6e70b9376701c2189f49f0a3dd9e} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!registerClient@{registerClient}}
+\index{registerClient@{registerClient}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{registerClient()}{registerClient()}}
+{\footnotesize\ttfamily Response\+Entity$<$?$>$ com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+register\+Client (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{Register\+DTO}}}]{register\+DTO }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00037}{37}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ RegisterResponse\ registerResponse\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{registerClient}}(registerDTO);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(registerResponse);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a4e9ea86b75f4dec89500e6cf3db9feea}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a4e9ea86b75f4dec89500e6cf3db9feea} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!updateClient@{updateClient}}
+\index{updateClient@{updateClient}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{updateClient()}{updateClient()}}
+{\footnotesize\ttfamily Response\+Entity$<$?$>$ com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+update\+Client (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}}]{client,  }\item[{@Path\+Variable("{}clientid"{}) Long}]{client\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00054}{54}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ isUpdated\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}{clientService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a184c8778ae6962dfa729c330118742a8}{updateClient}}(client,\ clientId);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isUpdated)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.ok(\textcolor{stringliteral}{"{}Client\ updated\ successfully"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ResponseEntity.badRequest().body(\textcolor{stringliteral}{"{}Error\ updating\ client"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller_a1b7d5896de636458e667e70452f0e1f2} 
+\index{com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}!clientService@{clientService}}
+\index{clientService@{clientService}!com.example.travelpal.controller.ClientController@{com.example.travelpal.controller.ClientController}}
+\doxysubsubsection{\texorpdfstring{clientService}{clientService}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{Client\+Service}} com.\+example.\+travelpal.\+controller.\+Client\+Controller.\+client\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_controller_8java_source_l00018}{18}} of file \mbox{\hyperlink{_client_controller_8java_source}{Client\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_controller_8java}{Client\+Controller.\+java}}\end{DoxyCompactItemize}

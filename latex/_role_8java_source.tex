@@ -1,0 +1,56 @@
+\doxysection{Role.\+java}
+\hypertarget{_role_8java_source}{}\label{_role_8java_source}\index{Role.java@{Role.java}}
+\mbox{\hyperlink{_role_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00001}00001\ \textcolor{comment}{//package\ com.example.travelpal.models;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00002}00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00003}00003\ \textcolor{comment}{//import\ jakarta.persistence.*;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00004}00004\ \textcolor{comment}{//import\ lombok.Getter;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00005}00005\ \textcolor{comment}{//import\ lombok.Setter;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00006}00006\ \textcolor{comment}{//import\ org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00007}00007\ \textcolor{comment}{//import\ org.springframework.security.core.GrantedAuthority;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00008}00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00009}00009\ \textcolor{comment}{//@Getter}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00010}00010\ \textcolor{comment}{//@Setter}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00011}00011\ \textcolor{comment}{//@Entity}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00012}00012\ \textcolor{comment}{//@Table(name\ ="{}roles"{})}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00013}00013\ \textcolor{comment}{//public\ class\ Role\ implements\ GrantedAuthority\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00014}00014\ \textcolor{comment}{//\ \ \ \ @Id}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00015}00015\ \textcolor{comment}{//\ \ \ \ @GeneratedValue(strategy\ =\ GenerationType.AUTO)}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ @Column(name\ =\ "{}role\_id"{})}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00017}00017\ \textcolor{comment}{//\ \ \ \ private\ Long\ id;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00018}00018\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00019}00019\ \textcolor{comment}{//\ \ \ \ private\ String\ authority;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00020}00020\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00021}00021\ \textcolor{comment}{//\ \ \ \ public\ Role()\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ super();}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00023}00023\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00024}00024\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00025}00025\ \textcolor{comment}{//\ \ \ \ public\ Role(String\ authority)\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00026}00026\ \textcolor{comment}{//\ \ \ \ \ \ \ \ this.authority\ =\ authority;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00027}00027\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00028}00028\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00029}00029\ \textcolor{comment}{//\ \ \ \ public\ Role(Long\ id,\ String\ authority)\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00030}00030\ \textcolor{comment}{//\ \ \ \ \ \ \ \ this.id\ =\ id;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00031}00031\ \textcolor{comment}{//\ \ \ \ \ \ \ \ this.authority\ =\ authority;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00032}00032\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00033}00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00034}00034\ \textcolor{comment}{//\ \ \ \ public\ Long\ getId()\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00035}00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ return\ id;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00036}00036\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00037}00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00038}00038\ \textcolor{comment}{//\ \ \ \ public\ void\ setId(Long\ id)\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00039}00039\ \textcolor{comment}{//\ \ \ \ \ \ \ \ this.id\ =\ id;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00040}00040\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00041}00041\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00042}00042\ \textcolor{comment}{//\ \ \ \ @Override}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00043}00043\ \textcolor{comment}{//\ \ \ \ public\ String\ getAuthority()\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00044}00044\ \textcolor{comment}{//\ \ \ \ \ \ \ \ return\ this.authority;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00045}00045\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00046}00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00047}00047\ \textcolor{comment}{//\ \ \ \ public\ void\ setAuthority(String\ authority)\ \{}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00048}00048\ \textcolor{comment}{//\ \ \ \ \ \ \ \ this.authority\ =\ authority;}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00049}00049\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_role_8java_source_l00050}00050\ \textcolor{comment}{//\}}}
+
+\end{DoxyCode}

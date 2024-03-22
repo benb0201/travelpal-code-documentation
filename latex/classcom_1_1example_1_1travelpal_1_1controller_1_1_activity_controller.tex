@@ -1,0 +1,136 @@
+\doxysection{com.\+example.\+travelpal.\+controller.\+Activity\+Controller Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller}{}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller}\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a108d3f33f093fa3980834e535edbae42}{Activity\+Controller}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{Activity\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activity\+Service}})
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a92719e696f3e038c17d918e1d558eb49}{get\+Activities}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_afb8fd2f190abc76a5ecea312c89fd6d1}{register\+Activity}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}} activity)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a292f5dbb8ad3253efe6de6c80d57ca64}{delete\+Activity}} (@Path\+Variable Long activity\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a8a6098274672648b425eaf10999c37a2}{update\+Activity}} (@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}} activity, @Path\+Variable Long activity\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{Activity\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activity\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00012}{12}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a108d3f33f093fa3980834e535edbae42}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a108d3f33f093fa3980834e535edbae42} 
+\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}!ActivityController@{ActivityController}}
+\index{ActivityController@{ActivityController}!com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection{\texorpdfstring{ActivityController()}{ActivityController()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+controller.\+Activity\+Controller.\+Activity\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{Activity\+Service}}}]{activity\+Service }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00016}{16}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ this.activityService\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activityService}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a292f5dbb8ad3253efe6de6c80d57ca64}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a292f5dbb8ad3253efe6de6c80d57ca64} 
+\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}!deleteActivity@{deleteActivity}}
+\index{deleteActivity@{deleteActivity}!com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection{\texorpdfstring{deleteActivity()}{deleteActivity()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Activity\+Controller.\+delete\+Activity (\begin{DoxyParamCaption}\item[{@Path\+Variable Long}]{activity\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00031}{31}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activityService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a87d43c6ec87288408ee1509df6eca313}{deleteActivity}}(activityId);}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a92719e696f3e038c17d918e1d558eb49}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a92719e696f3e038c17d918e1d558eb49} 
+\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}!getActivities@{getActivities}}
+\index{getActivities@{getActivities}!com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection{\texorpdfstring{getActivities()}{getActivities()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}} $>$ com.\+example.\+travelpal.\+controller.\+Activity\+Controller.\+get\+Activities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00021}{21}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activityService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a3215f5325c3381c859745105d1f25ffb}{getActivities}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_afb8fd2f190abc76a5ecea312c89fd6d1}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_afb8fd2f190abc76a5ecea312c89fd6d1} 
+\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}!registerActivity@{registerActivity}}
+\index{registerActivity@{registerActivity}!com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection{\texorpdfstring{registerActivity()}{registerActivity()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Activity\+Controller.\+register\+Activity (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}}]{activity }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00026}{26}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activityService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a4eb9ad15ccb47fc7d8dc0cc5575cb4cc}{addNewActivity}}(activity);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a8a6098274672648b425eaf10999c37a2}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a8a6098274672648b425eaf10999c37a2} 
+\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}!updateActivity@{updateActivity}}
+\index{updateActivity@{updateActivity}!com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection{\texorpdfstring{updateActivity()}{updateActivity()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+controller.\+Activity\+Controller.\+update\+Activity (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}}]{activity,  }\item[{@Path\+Variable Long}]{activity\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00036}{36}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activityService}}.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ae704d8192cd1fb553fdb4f9d4b751f6d}{updateActivity}}(activity,\ activityId);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}\label{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e} 
+\index{com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}!activityService@{activityService}}
+\index{activityService@{activityService}!com.example.travelpal.controller.ActivityController@{com.example.travelpal.controller.ActivityController}}
+\doxysubsubsection{\texorpdfstring{activityService}{activityService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{Activity\+Service}} com.\+example.\+travelpal.\+controller.\+Activity\+Controller.\+activity\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_activity_controller_8java_source_l00013}{13}} of file \mbox{\hyperlink{_activity_controller_8java_source}{Activity\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_activity_controller_8java}{Activity\+Controller.\+java}}\end{DoxyCompactItemize}

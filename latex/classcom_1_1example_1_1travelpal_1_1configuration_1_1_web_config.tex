@@ -1,0 +1,98 @@
+\doxysection{com.\+example.\+travelpal.\+configuration.\+Web\+Config Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config}{}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config}\index{com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}}
+Inheritance diagram for com.\+example.\+travelpal.\+configuration.\+Web\+Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a2a4af59e993f32c12c75dd5ffc2e5daf}{Web\+Config}} (@Value("{}\$\{cross.\+origin\}"{}) String \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a8a28328023a446b5f8535d847491c4be}{cross\+Origin}})
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_aa40746d24d5ea8aad102374a38aae07d}{add\+Cors\+Mappings}} (Cors\+Registry registry)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final String \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a8a28328023a446b5f8535d847491c4be}{cross\+Origin}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_web_config_8java_source_l00012}{12}} of file \mbox{\hyperlink{_web_config_8java_source}{Web\+Config.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a2a4af59e993f32c12c75dd5ffc2e5daf}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a2a4af59e993f32c12c75dd5ffc2e5daf} 
+\index{com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}!WebConfig@{WebConfig}}
+\index{WebConfig@{WebConfig}!com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}}
+\doxysubsubsection{\texorpdfstring{WebConfig()}{WebConfig()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+configuration.\+Web\+Config.\+Web\+Config (\begin{DoxyParamCaption}\item[{@Value("{}\$\{cross.\+origin\}"{}) String}]{cross\+Origin }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_web_config_8java_source_l00016}{16}} of file \mbox{\hyperlink{_web_config_8java_source}{Web\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{cross.origin\}\textcolor{stringliteral}{"{})\ String\ crossOrigin)\ \{}}
+\DoxyCodeLine{00017\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ this.crossOrigin\ =\ crossOrigin;}}
+\DoxyCodeLine{00018\ \textcolor{stringliteral}{\ \ \ \ \}}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_aa40746d24d5ea8aad102374a38aae07d}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_aa40746d24d5ea8aad102374a38aae07d} 
+\index{com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}!addCorsMappings@{addCorsMappings}}
+\index{addCorsMappings@{addCorsMappings}!com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}}
+\doxysubsubsection{\texorpdfstring{addCorsMappings()}{addCorsMappings()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+configuration.\+Web\+Config.\+add\+Cors\+Mappings (\begin{DoxyParamCaption}\item[{Cors\+Registry}]{registry }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_web_config_8java_source_l00021}{21}} of file \mbox{\hyperlink{_web_config_8java_source}{Web\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{"{}*"{}}.equals(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a8a28328023a446b5f8535d847491c4be}{crossOrigin}}))\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ allowing\ all\ origins,\ set\ allowCredentials\ to\ false\ for\ security}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ registry.addMapping(\textcolor{stringliteral}{"{}/**"{}})}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowedOrigins(\textcolor{stringliteral}{"{}*"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowedMethods(\textcolor{stringliteral}{"{}GET"{}},\ \textcolor{stringliteral}{"{}POST"{}},\ \textcolor{stringliteral}{"{}PUT"{}},\ \textcolor{stringliteral}{"{}DELETE"{}},\ \textcolor{stringliteral}{"{}OPTIONS"{}})}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowedHeaders(\textcolor{stringliteral}{"{}*"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowCredentials(\textcolor{keyword}{false});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ registry.addMapping(\textcolor{stringliteral}{"{}/**"{}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowedOrigins(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a8a28328023a446b5f8535d847491c4be}{crossOrigin}})}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowedMethods(\textcolor{stringliteral}{"{}GET"{}},\ \textcolor{stringliteral}{"{}POST"{}},\ \textcolor{stringliteral}{"{}PUT"{}},\ \textcolor{stringliteral}{"{}DELETE"{}},\ \textcolor{stringliteral}{"{}OPTIONS"{}})}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowedHeaders(\textcolor{stringliteral}{"{}*"{}})}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .allowCredentials(\textcolor{keyword}{true});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a8a28328023a446b5f8535d847491c4be}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config_a8a28328023a446b5f8535d847491c4be} 
+\index{com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}!crossOrigin@{crossOrigin}}
+\index{crossOrigin@{crossOrigin}!com.example.travelpal.configuration.WebConfig@{com.example.travelpal.configuration.WebConfig}}
+\doxysubsubsection{\texorpdfstring{crossOrigin}{crossOrigin}}
+{\footnotesize\ttfamily final String com.\+example.\+travelpal.\+configuration.\+Web\+Config.\+cross\+Origin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_web_config_8java_source_l00014}{14}} of file \mbox{\hyperlink{_web_config_8java_source}{Web\+Config.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_web_config_8java}{Web\+Config.\+java}}\end{DoxyCompactItemize}

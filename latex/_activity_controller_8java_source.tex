@@ -1,0 +1,45 @@
+\doxysection{Activity\+Controller.\+java}
+\hypertarget{_activity_controller_8java_source}{}\label{_activity_controller_8java_source}\index{ActivityController.java@{ActivityController.java}}
+\mbox{\hyperlink{_activity_controller_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00001}\mbox{\hyperlink{namespacecom_1_1example_1_1travelpal_1_1controller}{00001}}\ \textcolor{keyword}{package\ }com.example.travelpal.controller;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.service.ActivityService;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.models.Activity;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.*;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00010}00010\ @RestController}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00011}00011\ @RequestMapping(path\ =\ \textcolor{stringliteral}{"{}api/v1/activity"{}})}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00012}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller}{00012}}\ public\ class\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller}{ActivityController}}\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00013}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{00013}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{ActivityService}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a935eb561635d6cb7a4ed5d4a9ce8c52e}{activityService}};}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00015}00015\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00016}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a108d3f33f093fa3980834e535edbae42}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a108d3f33f093fa3980834e535edbae42}{ActivityController}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{ActivityService}}\ activityService)\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00017}00017\ \ \ \ \ \ \ \ \ this.activityService\ =\ activityService;}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00020}00020\ \ \ \ \ @GetMapping}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00021}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a92719e696f3e038c17d918e1d558eb49}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Activity>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a92719e696f3e038c17d918e1d558eb49}{getActivities}}()\{}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ activityService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a3215f5325c3381c859745105d1f25ffb}{getActivities}}();}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00025}00025\ \ \ \ \ @PostMapping}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00026}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_afb8fd2f190abc76a5ecea312c89fd6d1}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_afb8fd2f190abc76a5ecea312c89fd6d1}{registerActivity}}(@RequestBody\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity)\{}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ activityService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a4eb9ad15ccb47fc7d8dc0cc5575cb4cc}{addNewActivity}}(activity);}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00030}00030\ \ \ \ \ @DeleteMapping\ (path\ =\ \textcolor{stringliteral}{"{}\{activityid\}"{}})}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00031}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a292f5dbb8ad3253efe6de6c80d57ca64}{00031}}\ \ \ \ \ public\ \textcolor{keywordtype}{void}\ deleteActivity(@PathVariable\ Long\ activityId)\{}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ activityService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a87d43c6ec87288408ee1509df6eca313}{deleteActivity}}(activityId);}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00035}00035\ \ \ \ \ @PutMapping\ (path\ =\ \textcolor{stringliteral}{"{}\{activityid\}"{}})}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00036}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller_a8a6098274672648b425eaf10999c37a2}{00036}}\ \ \ \ \ public\ \textcolor{keywordtype}{void}\ updateActivity(@RequestBody\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity,\ @PathVariable\ Long\ activityId)\{}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ activityService.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ae704d8192cd1fb553fdb4f9d4b751f6d}{updateActivity}}(activity,\ activityId);}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_controller_8java_source_l00039}00039\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,60 @@
+\doxysection{Activity\+Service.\+java}
+\hypertarget{_activity_service_8java_source}{}\label{_activity_service_8java_source}\index{ActivityService.java@{ActivityService.java}}
+\mbox{\hyperlink{_activity_service_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00001}\mbox{\hyperlink{namespacecom_1_1example_1_1travelpal_1_1service}{00001}}\ \textcolor{keyword}{package\ }com.example.travelpal.service;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Activity;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ActivityRepository;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00005}00005\ \textcolor{keyword}{import}\ jakarta.persistence.EntityNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.beans.factory.annotation.Autowired;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.springframework.stereotype.Service;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.springframework.transaction.annotation.Transactional;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00013}00013\ @Service}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00014}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service}{ActivityService}}\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00015}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_activity_repository}{ActivityRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}};}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00017}00017\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00018}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_aa9235b86c34b1e760d281876b3b349ae}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_aa9235b86c34b1e760d281876b3b349ae}{ActivityService}}(\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_activity_repository}{ActivityRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}})\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ this.activityRepository\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}};}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00022}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a3215f5325c3381c859745105d1f25ffb}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Activity>\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a3215f5325c3381c859745105d1f25ffb}{getActivities}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}}.findAll();}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00026}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a4eb9ad15ccb47fc7d8dc0cc5575cb4cc}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a4eb9ad15ccb47fc7d8dc0cc5575cb4cc}{addNewActivity}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity)\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}}.save(activity);}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00030}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a87d43c6ec87288408ee1509df6eca313}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_a87d43c6ec87288408ee1509df6eca313}{deleteActivity}}(Long\ activityId)\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ exists\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}}.existsById(activityId);}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!exists)\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ EntityNotFoundException(\textcolor{stringliteral}{"{}Activity\ with\ ID\ "{}}\ +\ activityId\ +\ \textcolor{stringliteral}{"{}\ does\ not\ exist."{}});}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}}.deleteById(activityId);}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00038}00038\ \ \ \ \ @Transactional}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00039}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ae704d8192cd1fb553fdb4f9d4b751f6d}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ae704d8192cd1fb553fdb4f9d4b751f6d}{updateActivity}}(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ activity,\ Long\ activityId)\ \{}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity}{Activity}}\ existingActivity\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service_ad5fabce993eefa4f4b41f8774b0a7e4b}{activityRepository}}.findById(activityId)}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .orElseThrow(()\ -\/>\ \textcolor{keyword}{new}\ EntityNotFoundException(\textcolor{stringliteral}{"{}Activity\ with\ ID\ "{}}\ +\ activityId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}}));}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ attributes\ of\ the\ existing\ activity\ with\ the\ values\ from\ the\ new\ activity}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ existingActivity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_af503c2ad2fffea1fb0b788d1f182e10c}{setName}}(activity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_a5d1471f93f1860cffc9d5868ee8e5234}{getName}}());}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ existingActivity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_afc52503b400f675930df44bb7a640336}{setDescription}}(activity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_aa050bd73dbae817912bc45b7dc2bb18a}{getDescription}}());}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ existingActivity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_aca1718d48f517c933664b125f93b5292}{setLocation}}(activity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_a189cb75a8d4319ba2be78bcd4613ed82}{getLocation}}());}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ existingActivity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_a7fcd23177716a2fbc7b97fd902488c43}{setCost}}(activity.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_activity_a8784f0d54d3ad849ca6e9d768186228a}{getCost}}());}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ No\ need\ to\ explicitly\ save\ the\ object\ due\ to\ the\ @Transactional\ annotation}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ The\ changes\ will\ be\ automatically\ persisted\ at\ the\ end\ of\ the\ transaction}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ updated\ activity\ back\ to\ the\ repository}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00052}00052\ \textcolor{comment}{//\ \ \ \ \ \ \ \ activityRepository.save(existingActivity);}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_activity_service_8java_source_l00054}00054\ \}}
+
+\end{DoxyCode}

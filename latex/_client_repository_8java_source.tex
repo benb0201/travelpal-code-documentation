@@ -1,0 +1,24 @@
+\doxysection{Client\+Repository.\+java}
+\hypertarget{_client_repository_8java_source}{}\label{_client_repository_8java_source}\index{ClientRepository.java@{ClientRepository.java}}
+\mbox{\hyperlink{_client_repository_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.repository;}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.models.Client;}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.springframework.data.jpa.repository.JpaRepository;}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.data.jpa.repository.Query;}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.springframework.stereotype.Repository;}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00010}00010\ @Repository}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00011}\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{ClientRepository}}}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{extends}\ JpaRepository<Client,\ Long>\ \{}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00014}\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_ab9abb6668ce8bcb1bdf3aea6ec48ccc7}{00014}}\ \ \ \ \ Optional<Client>\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_ab9abb6668ce8bcb1bdf3aea6ec48ccc7}{findClientByEmailAndPassword}}(String\ email,\ String\ password);}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00016}00016\ \ \ \ \ @Query(\textcolor{stringliteral}{"{}SELECT\ c\ FROM\ Client\ c\ WHERE\ c.email\ =\ ?1"{}})}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00017}\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{00017}}\ \ \ \ \ Optional<\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}>\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(String\ email);}
+\DoxyCodeLine{\Hypertarget{_client_repository_8java_source_l00018}00018\ \}}
+
+\end{DoxyCode}

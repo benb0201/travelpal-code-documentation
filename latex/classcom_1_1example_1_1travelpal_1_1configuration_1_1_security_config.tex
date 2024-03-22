@@ -1,0 +1,92 @@
+\doxysection{com.\+example.\+travelpal.\+configuration.\+Security\+Config Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config}{}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config}\index{com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Password\+Encoder \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{password\+Encoder}} ()
+\item 
+Security\+Filter\+Chain \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_adf340b1299febfc9b0b27911c5abe4c7}{default\+Security\+Filter\+Chain}} (Http\+Security http)  throws Exception 
+\item 
+User\+Details\+Service \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_a384a3ffc8d7d0d71261984ed5aea67ab}{users}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_security_config_8java_source_l00022}{22}} of file \mbox{\hyperlink{_security_config_8java_source}{Security\+Config.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_adf340b1299febfc9b0b27911c5abe4c7}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_adf340b1299febfc9b0b27911c5abe4c7} 
+\index{com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}!defaultSecurityFilterChain@{defaultSecurityFilterChain}}
+\index{defaultSecurityFilterChain@{defaultSecurityFilterChain}!com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}}
+\doxysubsubsection{\texorpdfstring{defaultSecurityFilterChain()}{defaultSecurityFilterChain()}}
+{\footnotesize\ttfamily Security\+Filter\+Chain com.\+example.\+travelpal.\+configuration.\+Security\+Config.\+default\+Security\+Filter\+Chain (\begin{DoxyParamCaption}\item[{Http\+Security}]{http }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Definition at line \mbox{\hyperlink{_security_config_8java_source_l00030}{30}} of file \mbox{\hyperlink{_security_config_8java_source}{Security\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ http}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .csrf(csrf\ -\/>\ csrf.disable())}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .formLogin(withDefaults())\ \textcolor{comment}{//\ Use\ default\ Spring\ Security\ login\ form}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32} 
+\index{com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}!passwordEncoder@{passwordEncoder}}
+\index{passwordEncoder@{passwordEncoder}!com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}}
+\doxysubsubsection{\texorpdfstring{passwordEncoder()}{passwordEncoder()}}
+{\footnotesize\ttfamily Password\+Encoder com.\+example.\+travelpal.\+configuration.\+Security\+Config.\+password\+Encoder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_security_config_8java_source_l00025}{25}} of file \mbox{\hyperlink{_security_config_8java_source}{Security\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ BCryptPasswordEncoder();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_a384a3ffc8d7d0d71261984ed5aea67ab}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_a384a3ffc8d7d0d71261984ed5aea67ab} 
+\index{com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}!users@{users}}
+\index{users@{users}!com.example.travelpal.configuration.SecurityConfig@{com.example.travelpal.configuration.SecurityConfig}}
+\doxysubsubsection{\texorpdfstring{users()}{users()}}
+{\footnotesize\ttfamily User\+Details\+Service com.\+example.\+travelpal.\+configuration.\+Security\+Config.\+users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_security_config_8java_source_l00038}{38}} of file \mbox{\hyperlink{_security_config_8java_source}{Security\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ UserDetails\ admin\ =\ User.builder()}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .username(\textcolor{stringliteral}{"{}admin"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .password(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{passwordEncoder}}().encode(\textcolor{stringliteral}{"{}password"{}}))}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .roles(\textcolor{stringliteral}{"{}ADMIN"{}})}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ UserDetails\ user\ =\ User.builder()}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .username(\textcolor{stringliteral}{"{}user"{}})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .password(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config_aef8375f2f08482d33afe8563e435cb32}{passwordEncoder}}().encode(\textcolor{stringliteral}{"{}password"{}}))}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .roles(\textcolor{stringliteral}{"{}USER"{}})}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ InMemoryUserDetailsManager(admin,\ user);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_security_config_8java}{Security\+Config.\+java}}\end{DoxyCompactItemize}

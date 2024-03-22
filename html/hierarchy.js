@@ -1,0 +1,46 @@
+var hierarchy =
+[
+    [ "com.example.travelpal.models.Activity", "classcom_1_1example_1_1travelpal_1_1models_1_1_activity.html", null ],
+    [ "com.example.travelpal.controller.ActivityController", "classcom_1_1example_1_1travelpal_1_1controller_1_1_activity_controller.html", null ],
+    [ "com.example.travelpal.service.ActivityService", "classcom_1_1example_1_1travelpal_1_1service_1_1_activity_service.html", null ],
+    [ "com.example.travelpal.models.Client", "classcom_1_1example_1_1travelpal_1_1models_1_1_client.html", null ],
+    [ "com.example.travelpal.configuration.ClientConfig", "classcom_1_1example_1_1travelpal_1_1configuration_1_1_client_config.html", null ],
+    [ "com.example.travelpal.controller.ClientController", "classcom_1_1example_1_1travelpal_1_1controller_1_1_client_controller.html", null ],
+    [ "com.example.travelpal.dto.ClientDTO", "classcom_1_1example_1_1travelpal_1_1dto_1_1_client_d_t_o.html", null ],
+    [ "com.example.travelpal.client.ClientRepositoryTest", "classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test.html", null ],
+    [ "com.example.travelpal.service.ClientService", "classcom_1_1example_1_1travelpal_1_1service_1_1_client_service.html", null ],
+    [ "com.example.travelpal.client.ClientServiceTest", "classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test.html", null ],
+    [ "com.example.travelpal.models.Destination", "classcom_1_1example_1_1travelpal_1_1models_1_1_destination.html", null ],
+    [ "com.example.travelpal.configuration.DestinationConfig", "classcom_1_1example_1_1travelpal_1_1configuration_1_1_destination_config.html", null ],
+    [ "com.example.travelpal.controller.DestinationController", "classcom_1_1example_1_1travelpal_1_1controller_1_1_destination_controller.html", null ],
+    [ "com.example.travelpal.DestinationList", "classcom_1_1example_1_1travelpal_1_1_destination_list.html", null ],
+    [ "com.example.travelpal.service.DestinationService", "classcom_1_1example_1_1travelpal_1_1service_1_1_destination_service.html", null ],
+    [ "com.example.travelpal.models.Itinerary", "classcom_1_1example_1_1travelpal_1_1models_1_1_itinerary.html", null ],
+    [ "com.example.travelpal.configuration.ItineraryConfig", "classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config.html", null ],
+    [ "com.example.travelpal.controller.ItineraryController", "classcom_1_1example_1_1travelpal_1_1controller_1_1_itinerary_controller.html", null ],
+    [ "com.example.travelpal.service.ItineraryService", "classcom_1_1example_1_1travelpal_1_1service_1_1_itinerary_service.html", null ],
+    [ "com.example.travelpal.dto.LoginDTO", "classcom_1_1example_1_1travelpal_1_1dto_1_1_login_d_t_o.html", null ],
+    [ "com.example.travelpal.response.LoginResponse", "classcom_1_1example_1_1travelpal_1_1response_1_1_login_response.html", null ],
+    [ "com.example.travelpal.dto.RegisterDTO", "classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o.html", null ],
+    [ "com.example.travelpal.response.RegisterResponse", "classcom_1_1example_1_1travelpal_1_1response_1_1_register_response.html", null ],
+    [ "com.example.travelpal.models.Review", "classcom_1_1example_1_1travelpal_1_1models_1_1_review.html", null ],
+    [ "com.example.travelpal.controller.ReviewController", "classcom_1_1example_1_1travelpal_1_1controller_1_1_review_controller.html", null ],
+    [ "com.example.travelpal.service.ReviewService", "classcom_1_1example_1_1travelpal_1_1service_1_1_review_service.html", null ],
+    [ "com.example.travelpal.configuration.SecurityConfig", "classcom_1_1example_1_1travelpal_1_1configuration_1_1_security_config.html", null ],
+    [ "com.example.travelpal.models.Transport", "classcom_1_1example_1_1travelpal_1_1models_1_1_transport.html", null ],
+    [ "com.example.travelpal.controller.TransportController", "classcom_1_1example_1_1travelpal_1_1controller_1_1_transport_controller.html", null ],
+    [ "com.example.travelpal.service.TransportService", "classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service.html", null ],
+    [ "com.example.travelpal.TravelpalApplication", "classcom_1_1example_1_1travelpal_1_1_travelpal_application.html", null ],
+    [ "com.example.travelpal.TravelpalApplicationTests", "classcom_1_1example_1_1travelpal_1_1_travelpal_application_tests.html", null ],
+    [ "JpaRepository", null, [
+      [ "com.example.travelpal.repository.ActivityRepository", "interfacecom_1_1example_1_1travelpal_1_1repository_1_1_activity_repository.html", null ],
+      [ "com.example.travelpal.repository.ClientRepository", "interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository.html", null ],
+      [ "com.example.travelpal.repository.DestinationRepository", "interfacecom_1_1example_1_1travelpal_1_1repository_1_1_destination_repository.html", null ],
+      [ "com.example.travelpal.repository.ItineraryRepository", "interfacecom_1_1example_1_1travelpal_1_1repository_1_1_itinerary_repository.html", null ],
+      [ "com.example.travelpal.repository.ReviewRepository", "interfacecom_1_1example_1_1travelpal_1_1repository_1_1_review_repository.html", null ],
+      [ "com.example.travelpal.repository.TransportRepository", "interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository.html", null ]
+    ] ],
+    [ "WebMvcConfigurer", null, [
+      [ "com.example.travelpal.configuration.WebConfig", "classcom_1_1example_1_1travelpal_1_1configuration_1_1_web_config.html", null ]
+    ] ]
+];

@@ -1,0 +1,152 @@
+\doxysection{com.\+example.\+travelpal.\+service.\+Transport\+Service Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service}{}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service}\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a755e06629d0d2e5ff4fab65a19f597bc}{Transport\+Service}} (\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository}{Transport\+Repository}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transport\+Repository}})
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a36ce5a418a397279f45c0ff82883304d}{get\+Transportation}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a7871ed0d61db9ff3da5a0a6704760f4b}{add\+New\+Transport}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}} transport)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ad0cc664c40e26a45927aa984b5c02595}{delete\+Transport}} (Long transport\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a2b0e62289378237311bbc70b184e83ee}{update\+Transport}} (\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}} transport, Long transport\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository}{Transport\+Repository}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transport\+Repository}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00013}{13}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a755e06629d0d2e5ff4fab65a19f597bc}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a755e06629d0d2e5ff4fab65a19f597bc} 
+\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}!TransportService@{TransportService}}
+\index{TransportService@{TransportService}!com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection{\texorpdfstring{TransportService()}{TransportService()}}
+{\footnotesize\ttfamily com.\+example.\+travelpal.\+service.\+Transport\+Service.\+Transport\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository}{Transport\+Repository}}}]{transport\+Repository }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00017}{17}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ this.transportRepository\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}};}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a7871ed0d61db9ff3da5a0a6704760f4b}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a7871ed0d61db9ff3da5a0a6704760f4b} 
+\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}!addNewTransport@{addNewTransport}}
+\index{addNewTransport@{addNewTransport}!com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection{\texorpdfstring{addNewTransport()}{addNewTransport()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+service.\+Transport\+Service.\+add\+New\+Transport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}}}]{transport }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00025}{25}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.save(transport);}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ad0cc664c40e26a45927aa984b5c02595}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ad0cc664c40e26a45927aa984b5c02595} 
+\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}!deleteTransport@{deleteTransport}}
+\index{deleteTransport@{deleteTransport}!com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection{\texorpdfstring{deleteTransport()}{deleteTransport()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+service.\+Transport\+Service.\+delete\+Transport (\begin{DoxyParamCaption}\item[{Long}]{transport\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00029}{29}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.deleteById(transportId);}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a36ce5a418a397279f45c0ff82883304d}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a36ce5a418a397279f45c0ff82883304d} 
+\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}!getTransportation@{getTransportation}}
+\index{getTransportation@{getTransportation}!com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection{\texorpdfstring{getTransportation()}{getTransportation()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}} $>$ com.\+example.\+travelpal.\+service.\+Transport\+Service.\+get\+Transportation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00021}{21}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.findAll();}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a2b0e62289378237311bbc70b184e83ee}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_a2b0e62289378237311bbc70b184e83ee} 
+\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}!updateTransport@{updateTransport}}
+\index{updateTransport@{updateTransport}!com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection{\texorpdfstring{updateTransport()}{updateTransport()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+service.\+Transport\+Service.\+update\+Transport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_transport}{Transport}}}]{transport,  }\item[{Long}]{transport\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00033}{33}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ Optional<Transport>\ transportOptional\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.findById(transportId);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transportOptional.isEmpty())\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ EntityNotFoundException(\textcolor{stringliteral}{"{}Transport\ with\ ID\ "{}}\ +\ transportId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ existing\ transport\ from\ the\ Optional}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Transport\ existingTransport\ =\ transportOptional.get();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ attributes\ of\ the\ existing\ transport\ with\ the\ values\ from\ the\ new\ transport}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ existingTransport.setName(transport.getName());}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ existingTransport.setDescription(transport.getDescription());}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ existingTransport.setType(transport.getType());}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ existingTransport.setCost(transport.getCost());}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ existingTransport.setDestinations(transport.getDestinations());}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ updated\ transport\ back\ to\ the\ repository}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}{transportRepository}}.save(existingTransport);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70}\label{classcom_1_1example_1_1travelpal_1_1service_1_1_transport_service_ab545dff3ed8a14a9dbca7d8bb7f77c70} 
+\index{com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}!transportRepository@{transportRepository}}
+\index{transportRepository@{transportRepository}!com.example.travelpal.service.TransportService@{com.example.travelpal.service.TransportService}}
+\doxysubsubsection{\texorpdfstring{transportRepository}{transportRepository}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_transport_repository}{Transport\+Repository}} com.\+example.\+travelpal.\+service.\+Transport\+Service.\+transport\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_transport_service_8java_source_l00014}{14}} of file \mbox{\hyperlink{_transport_service_8java_source}{Transport\+Service.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_transport_service_8java}{Transport\+Service.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,187 @@
+\doxysection{Client\+Service\+Test.\+java}
+\hypertarget{_client_service_test_8java_source}{}\label{_client_service_test_8java_source}\index{ClientServiceTest.java@{ClientServiceTest.java}}
+\mbox{\hyperlink{_client_service_test_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00001}00001\ \textcolor{keyword}{package\ }com.example.travelpal.client;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00003}00003\ \textcolor{keyword}{import}\ com.example.travelpal.dto.RegisterDTO;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00004}00004\ \textcolor{keyword}{import}\ com.example.travelpal.models.Client;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00005}00005\ \textcolor{keyword}{import}\ com.example.travelpal.repository.ClientRepository;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00006}00006\ \textcolor{keyword}{import}\ com.example.travelpal.response.RegisterResponse;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00007}00007\ \textcolor{keyword}{import}\ com.example.travelpal.service.ClientService;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00008}00008\ \textcolor{keyword}{import}\ jakarta.persistence.EntityNotFoundException;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.junit.jupiter.api.BeforeEach;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00011}00011\ \textcolor{keyword}{import}\ org.junit.jupiter.api.extension.ExtendWith;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00012}00012\ \textcolor{keyword}{import}\ org.mockito.ArgumentCaptor;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00013}00013\ \textcolor{keyword}{import}\ org.mockito.Mock;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00014}00014\ \textcolor{keyword}{import}\ org.mockito.junit.jupiter.MockitoExtension;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00015}00015\ \textcolor{keyword}{import}\ org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00016}00016\ \textcolor{keyword}{import}\ org.springframework.security.crypto.password.PasswordEncoder;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00018}00018\ \textcolor{keyword}{import}\ java.time.LocalDate;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00019}00019\ \textcolor{keyword}{import}\ java.time.Month;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00020}00020\ \textcolor{keyword}{import}\ java.util.Optional;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00022}00022\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.assertj.core.api.Assertions.assertThat;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00023}00023\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.assertj.core.api.Assertions.assertThatThrownBy;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00024}00024\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.mockito.ArgumentMatchers.any;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00025}00025\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.mockito.BDDMockito.given;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00026}00026\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.mockito.Mockito.*;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00028}00028\ \textcolor{comment}{//With\ this\ annotation,\ I\ won't\ need\ to\ have\ the\ autocloseable\ object\ (and\ @AfterEach),\ as\ it\ does\ it\ all\ for\ me}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00029}00029\ @ExtendWith(MockitoExtension.class)}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00030}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test}{00030}}\ class\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test}{ClientServiceTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00032}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{00032}}\ \ \ \ \ @Mock\ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{ClientRepository}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad00bbb3d8b1f495aeb300464b5beb2bf}{repository}};}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00033}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aa191d036903872f8bdc4d7ab1fca2761}{00033}}\ \ \ \ \ \textcolor{keyword}{private}\ PasswordEncoder\ encoder\ =\ \textcolor{keyword}{new}\ BCryptPasswordEncoder();\ \textcolor{comment}{//\ Manually\ create\ an\ instance}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00034}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{00034}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{ClientService}}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ab22c6780176a5c60ff220feab333e619}{service}};}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00036}00036\ \ \ \ \ @BeforeEach}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00037}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0388d3917b3abc4e979e1e4a9f31cab9}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0388d3917b3abc4e979e1e4a9f31cab9}{setUp}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ service\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service}{ClientService}}(repository,\ encoder);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00041}00041\ \textcolor{comment}{//\ \ \ \ @AfterEach}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00042}00042\ \textcolor{comment}{//\ \ \ \ void\ tearDown()\ throws\ Exception\{}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00043}00043\ \textcolor{comment}{//\ \ \ \ \ \ \ \ autoCloseable.close();}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00044}00044\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00046}00046\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00047}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0c1cade9b2a452b80f80b249644c16ee}{00047}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a0c1cade9b2a452b80f80b249644c16ee}{getClients}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//when}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ service.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a16fa06df32cb5b3e01481dead345bf23}{getClients}}();}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//then}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ verify(repository).findAll();}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00054}00054\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00055}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a130b23daa3653bb2d373c468aab7e606}{00055}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a130b23daa3653bb2d373c468aab7e606}{canAddNewClient}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ given}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{RegisterDTO}}\ registerDTO\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{RegisterDTO}}(}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response}{RegisterResponse}}\ registerResponse\ =\ service.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{registerClient}}(registerDTO);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ then}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ assertThat(registerResponse.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response_addd157f615655bab22d8a717e199d42c}{getStatus}}()).isTrue();}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ assertThat(registerResponse.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response_abece9da33fb640cacfac63563ab6b049}{getMessage}}()).isEqualTo(\textcolor{stringliteral}{"{}Registration\ Successful"{}});}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ ArgumentCaptor<Client>\ clientArgumentCaptor\ =\ ArgumentCaptor.forClass(\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}.class);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ verify(repository).save(clientArgumentCaptor.capture());}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ capturedClient\ =\ clientArgumentCaptor.getValue();}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ assertThat(capturedClient.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a1a530b8e6b1735f15523189d14be6295}{getName}}()).isEqualTo(registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_ada7eff5e97402bb76f40a305c7a4beca}{getName}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ assertThat(capturedClient.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client_a3c4cc5b8388dbbe475e5abe38c9a3b16}{getEmail}}()).isEqualTo(registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_ad5ea9db5d3359185bafd637cf2d54262}{getEmail}}());}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adjust\ additional\ assertions\ based\ on\ your\ actual\ Client\ and\ RegisterDTO\ structures}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00084}00084\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00085}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a6e93b416b5411bef2c93aeaa2ef0316b}{00085}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a6e93b416b5411bef2c93aeaa2ef0316b}{willReturnFailureResponseWhenEmailIsTaken}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ given}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{RegisterDTO}}\ registerDTO\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o}{RegisterDTO}}(}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ given(repository.findClientByEmail(registerDTO.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1dto_1_1_register_d_t_o_ad5ea9db5d3359185bafd637cf2d54262}{getEmail}}()))}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .willReturn(Optional.of(\textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}()));\ \textcolor{comment}{//\ You\ can\ create\ a\ dummy\ Client\ since\ the\ focus\ is\ on\ email\ existence\ check}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response}{RegisterResponse}}\ registerResponse\ =\ service.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f9aaee8dd9346d5a0c0d81321962a7f}{registerClient}}(registerDTO);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ then}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ assertThat(registerResponse.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response_addd157f615655bab22d8a717e199d42c}{getStatus}}()).isFalse();}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ assertThat(registerResponse.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1response_1_1_register_response_abece9da33fb640cacfac63563ab6b049}{getMessage}}()).isEqualTo(\textcolor{stringliteral}{"{}Email\ is\ already\ registered"{}});}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ verify(repository,\ never()).save(any());}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00110}00110\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00111}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a15e276943f2c2529e1d59cbb413c7034}{00111}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_a15e276943f2c2529e1d59cbb413c7034}{canDeleteClient}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ clientId\ =\ 3L;}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mock\ the\ behavior\ of\ clientRepository.existsById}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ when(repository.existsById(clientId)).thenReturn(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mock\ the\ behavior\ of\ clientRepository.deleteById}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ doNothing().when(repository).deleteById(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ service.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{deleteClient}}(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ verify(repository).existsById(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ verify(repository).deleteById(clientId);}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00129}00129\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00130}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad5cad2af9cfc2820440e98b881d27008}{00130}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_ad5cad2af9cfc2820440e98b881d27008}{willThrowWhenClientNotFoundById}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ clientId\ =\ 3L;\ \textcolor{comment}{//\ Assuming\ a\ client\ with\ this\ ID\ does\ not\ exist}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ and\ Then}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ assertThatThrownBy(()\ -\/>\ service.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a2f0bbc52d95176d3b6f99c5e99d9e15e}{deleteClient}}(clientId))}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .isInstanceOf(IllegalStateException.class)}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .hasMessageContaining(\textcolor{stringliteral}{"{}Client\ with\ id:\ "{}}\ +\ clientId\ +\ \textcolor{stringliteral}{"{}\ does\ not\ exist"{}});}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00138}00138\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00140}00140\ \textcolor{comment}{//\ \ \ \ @Test}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00141}00141\ \textcolor{comment}{//\ \ \ \ void\ canUpdateClient()\ \{}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00142}00142\ \textcolor{comment}{//\ \ \ \ \ \ \ \ //given}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00143}00143\ \textcolor{comment}{//\ \ \ \ \ \ \ \ String\ email\ =\ "{}friend.org@gmail.com"{};}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00144}00144\ \textcolor{comment}{//\ \ \ \ \ \ \ \ Client\ client\ =\ new\ Client(}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00145}00145\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Friend"{},}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00146}00146\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00147}00147\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}password1"{},}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00148}00148\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00149}00149\ \textcolor{comment}{//\ \ \ \ \ \ \ \ );}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00150}00150\ \textcolor{comment}{//\ \ \ \ \ \ \ \ long\ clientId\ =\ 3L;\ //\ Assuming\ a\ client\ with\ this\ ID\ exists}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00151}00151\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00152}00152\ \textcolor{comment}{//\ \ \ \ \ \ \ \ //Mock\ Client\ existing}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00153}00153\ \textcolor{comment}{//\ \ \ \ \ \ \ \ when(repository.existsById(clientId)).thenReturn(true);}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00154}00154\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00155}00155\ \textcolor{comment}{//\ \ \ \ \ \ \ \ //\ Mock\ the\ behavior\ of\ repository.ById}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00156}00156\ \textcolor{comment}{//\ \ \ \ \ \ \ \ doNothing().when(repository).deleteById(clientId);}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00157}00157\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00158}00158\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00160}00160\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00161}\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aed6e7a49ded33336dbe5a707e5436130}{00161}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_service_test_aed6e7a49ded33336dbe5a707e5436130}{willThrowIfClientDoesNotExist}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//given}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}\ client\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1models_1_1_client}{Client}}(}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password1"{}},}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ clientId\ =\ 3L;\ \textcolor{comment}{//\ Assuming\ a\ client\ with\ this\ ID\ does\ not\ exist}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Mock\ Client\ not\ existing}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ when(repository.findById(clientId)).thenReturn(Optional.empty());}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ and\ Then}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ assertThatThrownBy(()\ -\/>\ service.\mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1service_1_1_client_service_a184c8778ae6962dfa729c330118742a8}{updateClient}}(client,\ clientId))}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .isInstanceOf(EntityNotFoundException.class)}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .hasMessageContaining(\textcolor{stringliteral}{"{}Client\ with\ ID\ "{}}\ +\ clientId\ +\ \textcolor{stringliteral}{"{}\ not\ found"{}});}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{_client_service_test_8java_source_l00181}00181\ \}}
+
+\end{DoxyCode}

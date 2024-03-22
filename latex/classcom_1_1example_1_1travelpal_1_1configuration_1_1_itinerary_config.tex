@@ -1,0 +1,63 @@
+\doxysection{com.\+example.\+travelpal.\+configuration.\+Itinerary\+Config Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config}{}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config}\index{com.example.travelpal.configuration.ItineraryConfig@{com.example.travelpal.configuration.ItineraryConfig}}
+\doxysubsubsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+Command\+Line\+Runner \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config_a5b68b85a53a6ee88ff709852c16293a7}{command\+Line\+Runner}} (\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_itinerary_repository}{Itinerary\+Repository}} itinerary\+Repository, \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}} client\+Repository, \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_activity_repository}{Activity\+Repository}} activity\+Repository)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_itinerary_config_8java_source_l00020}{20}} of file \mbox{\hyperlink{_itinerary_config_8java_source}{Itinerary\+Config.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config_a5b68b85a53a6ee88ff709852c16293a7}\label{classcom_1_1example_1_1travelpal_1_1configuration_1_1_itinerary_config_a5b68b85a53a6ee88ff709852c16293a7} 
+\index{com.example.travelpal.configuration.ItineraryConfig@{com.example.travelpal.configuration.ItineraryConfig}!commandLineRunner@{commandLineRunner}}
+\index{commandLineRunner@{commandLineRunner}!com.example.travelpal.configuration.ItineraryConfig@{com.example.travelpal.configuration.ItineraryConfig}}
+\doxysubsubsection{\texorpdfstring{commandLineRunner()}{commandLineRunner()}}
+{\footnotesize\ttfamily Command\+Line\+Runner com.\+example.\+travelpal.\+configuration.\+Itinerary\+Config.\+command\+Line\+Runner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_itinerary_repository}{Itinerary\+Repository}}}]{itinerary\+Repository,  }\item[{\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}}}]{client\+Repository,  }\item[{\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_activity_repository}{Activity\+Repository}}}]{activity\+Repository }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_itinerary_config_8java_source_l00022}{22}} of file \mbox{\hyperlink{_itinerary_config_8java_source}{Itinerary\+Config.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ args\ -\/>\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ activities\ for\ the\ first\ itinerary}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ Activity\ activity1\ =\ \textcolor{keyword}{new}\ Activity(\textcolor{stringliteral}{"{}Visit\ Eiffel\ Tower"{}},\ \textcolor{stringliteral}{"{}Tour\ of\ the\ Eiffel\ Tower"{}},\ \textcolor{stringliteral}{"{}Paris,\ France"{}},\ 50.0);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ Activity\ activity2\ =\ \textcolor{keyword}{new}\ Activity(\textcolor{stringliteral}{"{}Boat\ Tour"{}},\ \textcolor{stringliteral}{"{}Boat\ tour\ on\ the\ Seine\ River"{}},\ \textcolor{stringliteral}{"{}Paris,\ France"{}},\ 30.0);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ activities\ for\ the\ second\ itinerary}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ Activity\ activity3\ =\ \textcolor{keyword}{new}\ Activity(\textcolor{stringliteral}{"{}City\ Tour"{}},\ \textcolor{stringliteral}{"{}Tour\ of\ Amsterdam"{}},\ \textcolor{stringliteral}{"{}Amsterdam"{}},\ 40.0);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ Activity\ activity4\ =\ \textcolor{keyword}{new}\ Activity(\textcolor{stringliteral}{"{}Museum\ Visit"{}},\ \textcolor{stringliteral}{"{}Visit\ to\ the\ Van\ Gogh\ Museum"{}},\ \textcolor{stringliteral}{"{}Amsterdam"{}},\ 25.0);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ and\ save\ clients}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ Client\ client1\ =\ \textcolor{keyword}{new}\ Client(\textcolor{stringliteral}{"{}Alice"{}},\ \textcolor{stringliteral}{"{}alice@example.com"{}},\ \textcolor{stringliteral}{"{}password1"{}},\ LocalDate.of(1990,\ JULY,\ 15));}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ Client\ client2\ =\ \textcolor{keyword}{new}\ Client(\textcolor{stringliteral}{"{}Bob"{}},\ \textcolor{stringliteral}{"{}bob@example.com"{}},\ \textcolor{stringliteral}{"{}password2"{}},\ LocalDate.of(1985,\ AUGUST,\ 25));}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ clientRepository.saveAll(List.of(client1,\ client2));}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ and\ save\ itineraries}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ Itinerary\ itinerary1\ =\ \textcolor{keyword}{new}\ Itinerary(\textcolor{stringliteral}{"{}Summer\ Vacation"{}},\ \textcolor{stringliteral}{"{}Exploring\ Europe"{}},\ LocalDate.of(2023,\ JULY,\ 1),\ LocalDate.of(2023,\ JULY,\ 5),}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Paris,\ France"{}},\ \textcolor{stringliteral}{"{}Don't\ forget\ camera!"{}},\ \textcolor{stringliteral}{"{}Hotel\ in\ Paris\ (can\ be\ more\ specific/vague)"{}},\ 200.00,\ client1,\ List.of(activity1,\ activity2));}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ Itinerary\ itinerary2\ =\ \textcolor{keyword}{new}\ Itinerary(\textcolor{stringliteral}{"{}City\ Break"{}},\ \textcolor{stringliteral}{"{}Quick\ getaway"{}},\ LocalDate.of(2023,\ AUGUST,\ 10),\ LocalDate.of(2023,\ AUGUST,\ 15),}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Amsterdam"{}},\ \textcolor{stringliteral}{"{}Reserve\ restaurant\ tickets\ at\ amsterdameats.com"{}},\ \textcolor{stringliteral}{"{}TravelLodge"{}},\ 150.00,\ client2,\ List.of(activity3,\ activity4));}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ itinerary1.calculateEstimatedCost();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ itinerary2.calculateEstimatedCost();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ itineraryRepository.saveAll(List.of(itinerary1,\ itinerary2));}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_itinerary_config_8java}{Itinerary\+Config.\+java}}\end{DoxyCompactItemize}

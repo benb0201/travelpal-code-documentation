@@ -1,0 +1,116 @@
+\doxysection{com.\+example.\+travelpal.\+client.\+Client\+Repository\+Test Class Reference}
+\hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test}{}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test}\index{com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}}
+\doxysubsubsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a0f044afe6687c43fdd4ee1329746f416}{tear\+Down}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a48741ad4f2b59ab7ae24b7c905f4c109}{test\+Find\+Client\+By\+Email}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a7b38b878a6afa31b88ab2ec1eea9dbc1}{test\+Find\+Client\+By\+Email\+Not\+Found}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}} \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_client_repository_test_8java_source_l00017}{17}} of file \mbox{\hyperlink{_client_repository_test_8java_source}{Client\+Repository\+Test.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a0f044afe6687c43fdd4ee1329746f416}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a0f044afe6687c43fdd4ee1329746f416} 
+\index{com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Repository\+Test.\+tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_repository_test_8java_source_l00024}{24}} of file \mbox{\hyperlink{_client_repository_test_8java_source}{Client\+Repository\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.deleteAll();}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a48741ad4f2b59ab7ae24b7c905f4c109}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a48741ad4f2b59ab7ae24b7c905f4c109} 
+\index{com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}!testFindClientByEmail@{testFindClientByEmail}}
+\index{testFindClientByEmail@{testFindClientByEmail}!com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}}
+\doxysubsubsection{\texorpdfstring{testFindClientByEmail()}{testFindClientByEmail()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Repository\+Test.\+test\+Find\+Client\+By\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_repository_test_8java_source_l00029}{29}} of file \mbox{\hyperlink{_client_repository_test_8java_source}{Client\+Repository\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Given}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ String\ email\ =\ \textcolor{stringliteral}{"{}friend.org@gmail.com"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ Client\ client\ =\ \textcolor{keyword}{new}\ Client(}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Friend"{}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}qwerty12"{}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LocalDate.of(2000,\ Month.MARCH,\ 16)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.save(client);\ \textcolor{comment}{//\ Save\ the\ client\ to\ the\ database}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ Optional<Client>\ foundClient\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(email);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ assertThat(foundClient).isPresent();\ \textcolor{comment}{//\ Ensure\ the\ client\ is\ found}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ assertThat(foundClient.get().getName()).isEqualTo(\textcolor{stringliteral}{"{}Friend"{}});\ \textcolor{comment}{//\ Check\ other\ properties\ as\ needed}}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a7b38b878a6afa31b88ab2ec1eea9dbc1}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_a7b38b878a6afa31b88ab2ec1eea9dbc1} 
+\index{com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}!testFindClientByEmailNotFound@{testFindClientByEmailNotFound}}
+\index{testFindClientByEmailNotFound@{testFindClientByEmailNotFound}!com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}}
+\doxysubsubsection{\texorpdfstring{testFindClientByEmailNotFound()}{testFindClientByEmailNotFound()}}
+{\footnotesize\ttfamily void com.\+example.\+travelpal.\+client.\+Client\+Repository\+Test.\+test\+Find\+Client\+By\+Email\+Not\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_repository_test_8java_source_l00050}{50}} of file \mbox{\hyperlink{_client_repository_test_8java_source}{Client\+Repository\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ searching\ for\ a\ non-\/existent\ email}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ String\ nonExistentEmail\ =\ \textcolor{stringliteral}{"{}nonexistent@example.com"{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ Optional<Client>\ foundClient\ =\ \mbox{\hyperlink{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}{repository}}.\mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository_a209fb601b16c2929baade10eb6d7cae0}{findClientByEmail}}(nonExistentEmail);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ assertThat(foundClient).isNotPresent();\ \textcolor{comment}{//\ Ensure\ the\ result\ is\ empty}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4}\label{classcom_1_1example_1_1travelpal_1_1client_1_1_client_repository_test_aff7b4116dfe1667209fce5af369c92b4} 
+\index{com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}!repository@{repository}}
+\index{repository@{repository}!com.example.travelpal.client.ClientRepositoryTest@{com.example.travelpal.client.ClientRepositoryTest}}
+\doxysubsubsection{\texorpdfstring{repository}{repository}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacecom_1_1example_1_1travelpal_1_1repository_1_1_client_repository}{Client\+Repository}} com.\+example.\+travelpal.\+client.\+Client\+Repository\+Test.\+repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_repository_test_8java_source_l00020}{20}} of file \mbox{\hyperlink{_client_repository_test_8java_source}{Client\+Repository\+Test.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_repository_test_8java}{Client\+Repository\+Test.\+java}}\end{DoxyCompactItemize}
